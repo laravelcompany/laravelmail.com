@@ -6,13 +6,19 @@ const {src = '/src/assets/img/logo.svg'} = Astro.props
 
 <section class="hero my-24">
     <div class="container">
-        <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+        <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
             <div class="flex flex-col items-center gap-8 md:items-start">
                 <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-                    <slot><span class="text-gradient">Laravel</span> Mail Platform</slot>
+                    <slot><span class="text-gradient">Laravel</span> Mail</slot>
                 </h1>
-                <div class="flex flex-col gap-3 min-[500px]:flex-row">
 
+                <p class="text-2xl">
+                    The missing Email Dashboard and code-driven configuration for Laravel mails.
+                </p>
+                <p>
+                    Open-source self-hosted email dashboard for your laravel mails. <br/> Manage your own newsletters at a fraction of the cost.
+                </p>
+                <div class="flex flex-col gap-4 min-[500px]:flex-row">
                     <a class="button has-icon color-secondary" href="#">
                         <Icon name="ion:bookmark-outline"/>
                         Join Waitlist

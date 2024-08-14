@@ -6,11 +6,11 @@ import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
 const {
-  title = 'Astro',
-  description = 'A starter project with accessibility features using Astro static site builder. Contains accessible landmarks, skip links, a dark mode color scheme, better focus outline and keyboard menu navigation.',
-  url,
-  image = '/social-preview-image.png',
-  author = 'Mark Teekman',
+  title = 'Laravel Mail',
+  description = 'The missing email panel for Laravel.',
+  url = 'https://laravelmail.com',
+  image = '/assets/img/logo.svg',
+  author = 'Stefan',
 } = Astro.props
 ---
 
@@ -26,9 +26,7 @@ const {
     <SiteMeta
       title={title}
       description={description.substring(0, 100)}
-      url={Astro.site
-        ? `${Astro.site}/${title.toLowerCase().replaceAll(' ', '-')}`
-        : `https://accessible-astro.dev/${title.toLowerCase().replaceAll(' ', '-')}`}
+      url={url}
       image={image}
       author={author}
     />

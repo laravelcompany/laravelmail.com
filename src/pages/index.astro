@@ -2,39 +2,35 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
-import Counter from '../components/Counter.astro'
 import ContentMedia from '../components/ContentMedia.astro'
+import CallToAction from '../components/CallToAction.astro'
 ---
-
 <DefaultLayout title="Home">
   <Hero />
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Features</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Open Source">
-          Laravel Mail is an open source project and we're always looking for contributors.
+        <Feature icon="mdi:tailwind" title="Self Hosted">
+          Laravel Mail is an self hosted email marketing software that you can host on your own server.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="Accessible">
-          Laravel Mail is built with accessibility in mind. We've taken great care to ensure that it's easy to use and understand for everyone.
+        <Feature icon="mdi:wheelchair-accessibility" title="GrapesJS Editor">
+         Build faster emails  using the power of GrapesJS editor.
         </Feature>
-        <Feature icon="mdi:looks" title="Prettier">
-          We use Prettier to format our code, which means it's always clean and consistent.
+        <Feature icon="mdi:looks" title="Multiple workspaces">
+          Easily handle multiple workspaces or teams through a single interface.
         </Feature>
-        <Feature icon="mdi:eslint" title="ESLint">
-          Lint your code with strict a11y settings to ensure you stay on track with the WCAG standards.
+        <Feature icon="mdi:eslint" title="Email Inteligence">
+          Using the power of docker you will be able to run risk assessments and check for your users' email addresses.
         </Feature>
-        <Feature icon="mdi:book-open-page-variant" title="Blog">
-          This theme comes with a fully integrated blog, dynamic pages and SEO optimization.
+        <Feature icon="mdi:language-markdown" title="Message Tracking">
+          Automatically track message sending, opens, clicks, bounces and unsubscribes for each campaign.
         </Feature>
-        <Feature icon="mdi:language-markdown" title="Markdown & MDX">
-          Easily use .md and .mdx pages to build your websites or use it with Netlify CMS.
-        </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Dark mode">
+        <Feature icon="mdi:theme-light-dark" title="Multiple workspaces">
           Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
         </Feature>
-        <Feature icon="mdi:cog" title="Design System">
-          The theme offers some very handy utilities to help you build your website faster.
+        <Feature icon="mdi:cog" title="Design Workflows">
+          Design workflows to help you build your email marketing faster.
         </Feature>
         <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
           Excellent lighthouse scores means your website will load faster and get better SEO rankings.
@@ -42,32 +38,28 @@ import ContentMedia from '../components/ContentMedia.astro'
       </div>
     </div>
   </section>
-  <ContentMedia imgSrc="/accessible-components.webp">
-    <h2>Accessible Components</h2>
+  <CallToAction />
+  <ContentMedia imgSrc="https://raw.githubusercontent.com/42coders/workflows/master/resources/img/workflow_concept.png">
+    <h2>Advanced Workflows</h2>
     <p class="text-2xl">
-      This theme provides plenty of tried and tested Accessible Astro Components. Some are native to this theme and a
-      lot of others are integrated using a <a href="https://github.com/markteekman/accessible-astro-components"
-        >separate package</a
-      >. They'll get you up and running in building an accessible solution for your visitors.
+      Inspired by the 42 Coders of Workflow package, this package provides plenty of advanced workflows to help you build your email marketing faster.
     </p>
   </ContentMedia>
   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
-    <h2>WCAG 2.1 AA Compliant</h2>
+    <h2>
+      GrapesJS editor integration.
+    </h2>
     <p class="text-2xl">
-      Using semantic HTML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
+      Using semantic HTML and MJML, landmarks, skip links, screen reader friendly content, aria-labels, keyboard accessible
       navigation and components, clear outlines and tab indicators and the right color contrast, you're more certain of
       reaching WCAG AA compliance.
     </p>
   </ContentMedia>
-  <section class="mb-32 mt-64">
-    <div class="container">
-      <h2 class="mb-16 text-6xl">Counters</h2>
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
-        <Counter count="520" title="Stars" sub="On GitHub" />
-        <Counter count="17" title="Accessible" sub="Components" />
-        <Counter count="500" title="Commits" sub="Merged" />
-        <Counter count="18+" title="Months" sub="Since launch" />
-      </div>
-    </div>
-  </section>
+  <ContentMedia imgSrc="https://raw.githubusercontent.com/42coders/workflows/master/resources/img/workflow_concept.png">
+    <h2>Advanced Workflows</h2>
+    <p class="text-2xl">
+      Inspired by the 42 Coders of Workflow package, this package provides plenty of advanced workflows to help you build your email marketing faster.
+    </p>
+  </ContentMedia>
 </DefaultLayout>
+
