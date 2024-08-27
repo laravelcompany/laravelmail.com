@@ -3,23 +3,52 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 ---
+
 <DefaultLayout title="Home">
   <Hero />
-
-
   <section class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
         <div class="space-content flex flex-col justify-center">
           <h2>GrapesJS Editor.</h2>
           <p class="text-2xl">
-            With the help of <b><a target="_blank" rel="noopener noreferrer" href="https://grapesjs.com/">GrapesJS</a> </b>
+            With the help of <b
+              ><a target="_blank" rel="noopener noreferrer" href="https://grapesjs.com/">GrapesJS</a>
+            </b>
             you will be able to create your own templates for your mail campaigns.
           </p>
-
         </div>
-        <img alt="grape js"  style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;" class="rounded-lg" decoding="async" loading="lazy" src="https://i.imgur.com/Qu3UcyG.jpeg" />
+        <img
+          alt="grape js"
+          style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;"
+          class="rounded-lg"
+          decoding="async"
+          loading="lazy"
+          src="https://i.imgur.com/Qu3UcyG.jpeg"
+        />
       </div>
+    </div>
+  </section>
+  <section class="my-12">
+    <div
+      class="call-to-action mb-32 mt-24 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24"
+      data-astro-cid-balv45lp=""
+      data-astro-source-file="/home/saturn/Projects/website.laravelmail.com/src/components/CallToAction.astro"
+      data-astro-source-loc="2:101"
+     
+    >
+      <h2
+        class="text-center text-3xl md:text-5xl"
+      >
+       Try Laravel Mail
+      </h2>
+      <p class="text-2xl">
+        This project is still in development. If you want to try it out, you can use the docker image.
+      </p>
+      <a
+        href="https://hub.docker.com/r/laravelmail/app.laravelmail.com"
+        class="text-center text-lg"
+      >Using Docker</a>
     </div>
   </section>
   <section class="my-64">
@@ -35,9 +64,45 @@ import Feature from '../components/Feature.astro'
         <div class="space-content flex flex-col justify-center">
           <h2 data-astro-cid-b4koausq="">Advanced Workflows</h2>
           <p class="text-2xl" data-astro-cid-b4koausq="">
-            With the help of <b><a target="_blank" rel="noopener noreferrer" href="https://github.com/42coders/workflows">42coders/workflows</a> </b>
+            With the help of <b
+              ><a target="_blank" rel="noopener noreferrer" href="https://github.com/42coders/workflows"
+                >42coders/workflows</a
+              >
+            </b>
             in our platform you will be able to use drag and drop to build workflows for your mail campaigns.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="not-prose relative scroll-mt-[72px]">
+    <div class="mx-auto max-w-3xl rounded-md p-6 text-center shadow-xl dark:border dark:border-slate-600 dark:shadow-none">
+      <div class="mb-0 text-center md:mx-auto md:mb-0">
+        <h2 class="font-heading leading-tighter text-heading mb-4 text-4xl font-bold tracking-tighter md:text-4xl">
+          Laravel mail platform
+        </h2>
+        <p class="text-2xl">
+          Self hosted mail platform for your laravel application. Stop paying for mail services and start sending emails with ease.
+        </p>
+      </div>
+      <div class="m-auto mt-6 flex max-w-xs flex-col flex-nowrap gap-4 sm:max-w-md sm:flex-row sm:justify-center">
+        <div class="flex w-full sm:w-auto">
+          <a
+            href="https://hub.docker.com/r/laravelmail/app.laravelmail.com"
+            class="btn-primary w-full sm:mb-0"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Get template
+            <svg
+              class="-mr-1.5 ml-1 inline-block h-5 w-5 rtl:-ml-1.5 rtl:mr-1"
+              data-icon="tabler:download"
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <use xlink:href="#ai:tabler:download"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -48,10 +113,17 @@ import Feature from '../components/Feature.astro'
         <div class="space-content flex flex-col justify-center">
           <h2>Advanced Imports.</h2>
           <p class="text-2xl">
-           With a very powerful csv importer you will be able to import any contacts to your platform.
+            With a very powerful csv importer you will be able to import any contacts to your platform.
           </p>
         </div>
-        <img alt="grape js"  style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;" class="rounded-lg" decoding="async" loading="lazy" src="https://i.imgur.com/Oy1Wa0R.png" />
+        <img
+          alt="grape js"
+          style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;"
+          class="rounded-lg"
+          decoding="async"
+          loading="lazy"
+          src="https://i.imgur.com/Oy1Wa0R.png"
+        />
       </div>
     </div>
   </section>
@@ -63,7 +135,7 @@ import Feature from '../components/Feature.astro'
           Laravel Mail is an self hosted mail platform that you can host on your own server.
         </Feature>
         <Feature icon="mdi:wheelchair-accessibility" title="GrapesJS Editor">
-         Build faster emails  using the power of GrapesJS editor.
+          Build faster emails using the power of GrapesJS editor.
         </Feature>
         <Feature icon="mdi:looks" title="Multiple workspaces">
           Easily handle multiple workspaces or teams through a single interface.
@@ -80,6 +152,4 @@ import Feature from '../components/Feature.astro'
       </div>
     </div>
   </section>
-
 </DefaultLayout>
-
