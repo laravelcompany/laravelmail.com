@@ -2,6 +2,7 @@
 import DefaultLayout from '../layouts/DefaultLayout.astro'
 import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
+import { Icon } from 'astro-icon/components'
 ---
 
 <DefaultLayout title="Home">
@@ -46,16 +47,19 @@ import Feature from '../components/Feature.astro'
         This project is still in development. If you want to try it out, you can use the docker image.
       </p>
       <a
+        class="button has-icon color-secondary"
         href="https://hub.docker.com/r/laravelmail/app.laravelmail.com"
-        class="text-center text-lg"
-      >Using Docker</a>
+      >
+        <Icon name="ion:exit-outline" />
+        Try now
+      </a>
     </div>
   </section>
   <section class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
         <img
-          style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;"
+          style="border: 1vw solid;border-image: linear-gradient(to right, #F58140, #4b1e4e ) 0.8;"
           class="rounded-lg"
           decoding="async"
           loading="lazy"
@@ -88,20 +92,11 @@ import Feature from '../components/Feature.astro'
       <div class="m-auto mt-6 flex max-w-xs flex-col flex-nowrap gap-4 sm:max-w-md sm:flex-row sm:justify-center">
         <div class="flex w-full sm:w-auto">
           <a
+            class="button has-icon color-secondary"
             href="https://hub.docker.com/r/laravelmail/app.laravelmail.com"
-            class="btn-primary w-full sm:mb-0"
-            rel="noopener noreferrer"
-            target="_blank"
-          >Get template
-            <svg
-              class="-mr-1.5 ml-1 inline-block h-5 w-5 rtl:-ml-1.5 rtl:mr-1"
-              data-icon="tabler:download"
-              height="1em"
-              viewBox="0 0 24 24"
-              width="1em"
-            >
-              <use xlink:href="#ai:tabler:download"></use>
-            </svg>
+          >
+            <Icon name="ion:exit-outline" />
+            Try now
           </a>
         </div>
       </div>
