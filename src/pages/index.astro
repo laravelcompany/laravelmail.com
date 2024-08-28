@@ -31,25 +31,14 @@ import { Icon } from 'astro-icon/components'
     </div>
   </section>
   <section class="my-12">
-    <div
-      class="call-to-action mb-32 mt-24 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24"
-      data-astro-cid-balv45lp=""
-      data-astro-source-file="/home/saturn/Projects/website.laravelmail.com/src/components/CallToAction.astro"
-      data-astro-source-loc="2:101"
-     
-    >
-      <h2
-        class="text-center text-3xl md:text-5xl"
-      >
+    <div class="call-to-action mb-32 mt-24 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
+      <h2 class="text-center text-3xl md:text-5xl">
        Try Laravel Mail
       </h2>
       <p class="text-2xl">
-        This project is still in development. If you want to try it out, you can use the docker image.
+        This project is currently under development. If you'd like to give it a try, you can do so using the Docker image.
       </p>
-      <a
-        class="button has-icon color-secondary"
-        href="https://hub.docker.com/r/laravelmail/app.laravelmail.com"
-      >
+      <a class="button has-icon color-secondary" href="/try">
         <Icon name="ion:exit-outline" />
         Try now
       </a>
@@ -64,12 +53,12 @@ import { Icon } from 'astro-icon/components'
           decoding="async"
           loading="lazy"
           src="https://i.imgur.com/kk2edgP.png"
-        />
+         alt="Advanced Workflows" />
         <div class="space-content flex flex-col justify-center">
-          <h2 data-astro-cid-b4koausq="">Advanced Workflows</h2>
+          <h2>Advanced Workflows</h2>
           <p class="text-2xl" data-astro-cid-b4koausq="">
             With the help of <b
-              ><a target="_blank" rel="noopener noreferrer" href="https://github.com/42coders/workflows"
+              ><a target="_blank"  href="https://github.com/42coders/workflows"
                 >42coders/workflows</a
               >
             </b>
@@ -127,7 +116,8 @@ import { Icon } from 'astro-icon/components'
       <h2 class="mb-16 text-6xl">Features</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="mdi:tailwind" title="Self Hosted">
-          Laravel Mail is an self hosted mail platform that you can host on your own server.
+          Laravel Mail the missing mail platform for your laravel application.
+          Stop paying for mail services and start sending emails with ease.
         </Feature>
         <Feature icon="mdi:wheelchair-accessibility" title="GrapesJS Editor">
           Build faster emails using the power of GrapesJS editor.
@@ -138,8 +128,8 @@ import { Icon } from 'astro-icon/components'
         <Feature icon="mdi:eslint" title="Email Inteligence">
           Using the power of docker you will be able to run risk assessments and check for your users' email addresses.
         </Feature>
-        <Feature icon="mdi:language-markdown" title="Message Tracking">
-          Automatically track message sending, opens, clicks, bounces and unsubscribes for each campaign.
+        <Feature icon="mdi:language-markdown" title="No Cookies Tracking">
+          Because we don't use cookies, we don't track you and we are GDPR compliant by default.
         </Feature>
         <Feature icon="mdi:cog" title="Design Workflows">
           Design email workflows with the help of laravel workflow package much easier than before.
