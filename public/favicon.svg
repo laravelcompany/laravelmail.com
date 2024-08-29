@@ -1,9 +1,6 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_907_31" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="512" height="512">
-<rect width="512" height="512" rx="80" fill="#161618"/>
-</mask>
-<g mask="url(#mask0_907_31)">
-<path d="M166.892 69.3845H390.357L226.065 315.018H2.6001L166.892 69.3845Z" fill="#42E0CE"/>
-<path d="M176.677 337.783L113.043 432.923H347.108L511.4 187.29H338.645L237.988 337.783H176.677Z" fill="#A14FD6"/>
-</g>
+<svg  width="256" height="256" viewBox="0 0 903.88 648.31" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" >
+<path fill="#4b1e4e" opacity=".9" d="M318.88,648.31L903.88,52.7,70.7,0l93.07,243.11,476.73-89.59L225.81,405.18l93.07,243.11Z"/>
+<path stroke="#f58140" stroke-width="5" stroke-linecap="round" d="M2.5,266.82l100.53-38.49"/>
+<path stroke="#f58140" stroke-width="10" stroke-linecap="round" d="M49.08,375.35l268.6-102.83"/>
+<path stroke="#f58140" stroke-width="5" stroke-linecap="round" d="M39.45,510.05l99.58-38.12"/>
 </svg>
