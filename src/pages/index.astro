@@ -7,6 +7,46 @@ import { Icon } from 'astro-icon/components'
 
 <DefaultLayout title="Home">
   <Hero />
+  <section class="bg-white dark:bg-gray-900">
+    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
+        <p class="mb-4">
+          Built on the Sendportal.io core and supercharged with the 42coders workflow package, this product lets you create smart workflows with conditions for effortless automation. And just for kicks, we threw in email intelligence, the GrapeJS editor, and advanced imports—because why not make life easier?
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+        <img class="w-full rounded-lg" src="https://sendportal.io/img/sendportal.png" alt="sendportal.io">
+        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://raw.githubusercontent.com/42coders/workflows/master/resources/img/42workflows.png" alt="office content 2">
+      </div>
+    </div>
+  </section>
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="Campaign Management">
+          Blast your campaigns to every subscriber—or just your favorite VIP segments! And hey, why not design some stunning templates while you're at it?
+        </Feature>
+        <Feature icon="mdi:wheelchair-accessibility" title="Subscriber & List Management">
+          Bring in your customers with a swift API or a trusty CSV upload. Then, chop up your subscribers into custom segments like a pro chef slicing veggies!
+        </Feature>
+        <Feature icon="mdi:eye" title="Message Tracking">
+          Keep tabs on your campaigns like a hawk—track sends, opens, clicks, bounces, and even those sneaky unsubscribes, all automatically!
+        </Feature>
+        <Feature icon="mdi:eslint" title="Email Inteligence">
+          Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity superhero in a container!
+        </Feature>
+        <Feature icon="mdi:language-markdown" title="Rest Api">
+          Plug into Laravel Mail with ease using a super-flexible REST API—it's like connecting two puzzle pieces, but way more satisfying!
+        </Feature>
+        <Feature icon="mdi:cog" title="Design Workflows">
+          Design email workflows with the help of laravel workflow package much easier than before.
+        </Feature>
+
+      </div>
+    </div>
+  </section>
   <section class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
@@ -28,21 +68,6 @@ import { Icon } from 'astro-icon/components'
           src="https://i.imgur.com/Qu3UcyG.jpeg"
         />
       </div>
-    </div>
-  </section>
-  <section class="my-12">
-    <div class="call-to-action mb-32 mt-24 flex flex-col items-center gap-12 rounded-xl p-12 md:p-24">
-      <h2 class="text-center text-3xl md:text-5xl">
-       Try Laravel Mail
-      </h2>
-      <p class="text-2xl">
-        This project is currently under development.
-        If you'd like to give it a try, you can do so using the Docker image.
-      </p>
-      <a class="button has-icon color-secondary" href="/try">
-        <Icon name="ion:exit-outline" />
-        Try now
-      </a>
     </div>
   </section>
   <section class="my-64">
@@ -79,7 +104,7 @@ import { Icon } from 'astro-icon/components'
           </p>
         </div>
         <img
-          alt="grape js"
+          alt="advanced csv import"
           style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;"
           class="rounded-lg"
           decoding="async"
@@ -91,27 +116,23 @@ import { Icon } from 'astro-icon/components'
   </section>
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Self Hosted">
-          Laravel Mail the missing mail platform for your laravel application.
-          Stop paying for mail services and start sending emails with ease.
-        </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="GrapesJS Editor">
-          Build faster emails using the power of GrapesJS editor.
-        </Feature>
-        <Feature icon="mdi:looks" title="Multiple workspaces">
-          Easily handle multiple workspaces or teams through a single interface.
-        </Feature>
-        <Feature icon="mdi:eslint" title="Email Inteligence">
-          Using the power of docker you will be able to run risk assessments and check for your users' email addresses.
-        </Feature>
-        <Feature icon="mdi:language-markdown" title="No Cookies Tracking">
-          Because we don't use cookies, we don't track you and we are GDPR compliant by default.
-        </Feature>
-        <Feature icon="mdi:cog" title="Design Workflows">
-          Design email workflows with the help of laravel workflow package much easier than before.
-        </Feature>
+      <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+        <img
+          style="border: 1vw solid;border-image: linear-gradient(to right, #F58140, #4b1e4e ) 0.8;"
+          class="rounded-lg"
+          decoding="async"
+          loading="lazy"
+          src="https://i.imgur.com/hEqlA2l.png"
+          alt="Advanced Workflows" />
+        <div class="space-content flex flex-col justify-center">
+          <h2>Email Intelligence</h2>
+          <p class="text-2xl" data-astro-cid-b4koausq="">
+            Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity superhero in a container!
+           </p>
+           <p class="text-xl" data-astro-cid-b4koausq="">
+             Help understand better your clients and get more insights using the power of spiderfoot osint tool.
+          </p>
+        </div>
       </div>
     </div>
   </section>
