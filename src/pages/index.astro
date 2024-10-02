@@ -11,7 +11,7 @@ import Feature from '../components/Feature.astro'
       <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
         <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
         <p class="mb-4 text-2xl">
-          Built on the Sendportal.io core and supercharged with the 42coders workflow package, this product lets you create smart workflows with conditions for effortless automation.
+          Built on the <b class="text-accent-regular">Sendportal.io</b> core and supercharged with the 42coders workflow package, this product lets you create smart workflows with conditions for effortless automation.
         </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
@@ -24,14 +24,15 @@ import Feature from '../components/Feature.astro'
     <div class="container">
       <h2 class="mb-16 text-6xl">Features</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Campaign Management">
-          Blast your campaigns to every subscriber—or just your favorite VIP segments! And hey, why not design some stunning templates while you're at it?
+        <Feature icon="mdi:tailwind" title="Self Hosted">
+          Since this is a community driven project, we are self hosting the application. This means that you can host it on your own server.
+          This application can run on any server, including a VPS, a cloud server, or even a raspberry server.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="Subscriber & List Management">
-          Bring in your customers with a swift API or a trusty CSV upload. Then, chop up your subscribers into custom segments like a pro chef slicing veggies!
+        <Feature icon="mdi:wheelchair-accessibility" title="Save Money">
+          One short word sending email is free and there should be no cost for you to send your email campaigns.
         </Feature>
         <Feature icon="mdi:eye" title="Message Tracking">
-          Keep tabs on your campaigns like a hawk—track sends, opens, clicks, bounces, and even those sneaky unsubscribes, all automatically!
+          Keep tabs on your campaigns like a hawk—track sends, opens, clicks, bounces, and even those sneaky unsubscribes, all automatically using tracking pixels.
         </Feature>
         <Feature icon="mdi:eslint" title="Email Inteligence">
           Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity superhero in a container!
@@ -42,7 +43,12 @@ import Feature from '../components/Feature.astro'
         <Feature icon="mdi:cog" title="Design Workflows">
           Design email workflows with the help of laravel workflow package much easier than before.
         </Feature>
-
+        <Feature icon="mdi:cog" title="Unlimited everything">
+          Unlimited users, subscribers, segments and messages.
+        </Feature>
+        <Feature icon="mdi:cog" title="Campaign Management">
+          Send campaigns to all of your subscribers, or custom segments. Create your own beautiful templates.
+        </Feature>
       </div>
     </div>
   </section>
