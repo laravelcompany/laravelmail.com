@@ -7,16 +7,23 @@ import Feature from '../components/Feature.astro'
 <DefaultLayout title="Home">
   <Hero />
   <section class="bg-white dark:bg-gray-900">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-        <h2 class="mb-4 text-3xl tracking-tight font-extrabold text-gray-900 dark:text-white">We didn't reinvent the wheel</h2>
+    <div class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
+      <div class="font-light text-gray-500 dark:text-gray-400 sm:text-lg">
+        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          We didn't reinvent the wheel
+        </h2>
         <p class="mb-4 text-2xl">
-          Built on the Sendportal.io core and supercharged with the 42coders workflow package, this product lets you create smart workflows with conditions for effortless automation.
+          Built on the <b class="text-accent-regular">Sendportal.io</b> core and supercharged with the 42coders workflow
+          package, this product lets you create smart workflows with conditions for effortless automation.
         </p>
       </div>
-      <div class="grid grid-cols-2 gap-4 mt-8">
-        <img class="w-full rounded-lg" src="https://sendportal.io/img/sendportal.png" alt="sendportal.io">
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" src="https://raw.githubusercontent.com/42coders/workflows/master/resources/img/42workflows.png" alt="office content 2">
+      <div class="mt-8 grid grid-cols-2 gap-4">
+        <img class="w-full rounded-lg" src="https://sendportal.io/img/sendportal.png" alt="sendportal.io" />
+        <img
+          class="mt-4 w-full rounded-lg lg:mt-10"
+          src="https://raw.githubusercontent.com/42coders/workflows/master/resources/img/42workflows.png"
+          alt="office content 2"
+        />
       </div>
     </div>
   </section>
@@ -24,26 +31,62 @@ import Feature from '../components/Feature.astro'
     <div class="container">
       <h2 class="mb-16 text-6xl">Features</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Campaign Management">
-          Blast your campaigns to every subscriber—or just your favorite VIP segments! And hey, why not design some stunning templates while you're at it?
+        <Feature icon="mdi:tailwind" title="Self Hosted">
+          Since this is a community driven project, we are self hosting the application. This means that you can host it
+          on your own server. This application can run on any server, including a VPS, a cloud server, or even a
+          raspberry server.
         </Feature>
-        <Feature icon="mdi:wheelchair-accessibility" title="Subscriber & List Management">
-          Bring in your customers with a swift API or a trusty CSV upload. Then, chop up your subscribers into custom segments like a pro chef slicing veggies!
+        <Feature icon="mdi:wheelchair-accessibility" title="Save Money">
+          One short word sending email is free and there should be no cost for you to send your email campaigns.
         </Feature>
         <Feature icon="mdi:eye" title="Message Tracking">
-          Keep tabs on your campaigns like a hawk—track sends, opens, clicks, bounces, and even those sneaky unsubscribes, all automatically!
+          Keep tabs on your campaigns like a hawk—track sends, opens, clicks, bounces, and even those sneaky
+          unsubscribes, all automatically using tracking pixels.
         </Feature>
         <Feature icon="mdi:eslint" title="Email Inteligence">
-          Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity superhero in a container!
+          Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity
+          superhero in a container!
         </Feature>
         <Feature icon="mdi:language-markdown" title="Rest Api">
-          Plug into Laravel Mail with ease using a super-flexible REST API—it's like connecting two puzzle pieces, but way more satisfying!
+          Plug into Laravel Mail with ease using a super-flexible REST API—it's like connecting two puzzle pieces, but
+          way more satisfying!
         </Feature>
         <Feature icon="mdi:cog" title="Design Workflows">
           Design email workflows with the help of laravel workflow package much easier than before.
         </Feature>
-
+        <Feature icon="mdi:cog" title="Unlimited everything">
+          Unlimited users, subscribers, segments and messages.
+        </Feature>
+        <Feature icon="mdi:cog" title="Campaign Management">
+          Send campaigns to all of your subscribers, or custom segments. Create your own beautiful templates.
+        </Feature>
       </div>
+    </div>
+  </section>
+  <section class="bg-white dark:bg-gray-900">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-6 lg:py-16">
+      <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white lg:text-5xl">
+        Laravel Mail Package
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 sm:px-8 sm:text-lg lg:px-32 xl:px-64">
+        Loved by developers, contributors, and organizations worldwide.
+      </p>
+      <dl
+        class="mx-auto mt-8 grid max-w-screen-md grid-cols-2 gap-8 text-gray-900 dark:text-white sm:grid-cols-3 lg:mt-14"
+      >
+        <div class="flex flex-col items-center justify-center">
+          <dt class="mb-2 text-4xl font-extrabold">73M+</dt>
+          <dd class="text-xl font-normal text-gray-500 dark:text-gray-400">developers</dd>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <dt class="mb-2 text-4xl font-extrabold">1B+</dt>
+          <dd class="text-xl font-normal text-gray-500 dark:text-gray-400">contributors</dd>
+        </div>
+        <div class="flex flex-col items-center justify-center">
+          <dt class="mb-2 text-4xl font-extrabold">4M+</dt>
+          <dd class="text-xl font-normal text-gray-500 dark:text-gray-400">organizations</dd>
+        </div>
+      </dl>
     </div>
   </section>
   <section class="my-64">
@@ -69,6 +112,116 @@ import Feature from '../components/Feature.astro'
       </div>
     </div>
   </section>
+  <section class="bg-white dark:bg-gray-900">
+    <div class="mx-auto max-w-screen-xl items-center px-4 py-8 sm:py-16 lg:grid lg:gap-8 lg:px-6 xl:grid-cols-3 xl:gap-24">
+      <div class="mb-8 lg:mb-0" >
+        <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          Designed for strong teams like yours
+        </h2>
+        <p class="mb-4 text-gray-500 dark:text-gray-400 sm:text-xl">
+          Here we focus on markets where creativity and innovation can unlock long-term value and growth.
+        </p>
+      </div>
+      <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0" >
+        <div >
+          <div
+            class="bg-primary-100 dark:bg-primary-900 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12"
+            
+          >
+            <svg
+              class="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">Marketing</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals
+            every month with our marketing plan.
+          </p>
+        </div>
+        <div >
+          <div
+            class="bg-primary-100 dark:bg-primary-900 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12"
+            
+          >
+            <svg
+              class="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd"></path>
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">Business Automation</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help
+            you get started.
+          </p>
+        </div>
+        <div >
+          <div
+            class="bg-primary-100 dark:bg-primary-900 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12"
+            
+          >
+            <svg
+              class="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">Finance</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.
+          </p>
+        </div>
+        <div >
+          <div
+            class="bg-primary-100 dark:bg-primary-900 mb-4 flex h-10 w-10 items-center justify-center rounded-full lg:h-12 lg:w-12"
+            
+          >
+            <svg
+              class="text-primary-600 dark:text-primary-300 h-5 w-5 lg:h-6 lg:w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-bold dark:text-white">Enterprise Design</h3>
+          <p class="text-gray-500 dark:text-gray-400">
+            Craft beautiful, delightful experiences for both marketing and product with real cross-company
+            collaboration.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
@@ -78,17 +231,110 @@ import Feature from '../components/Feature.astro'
           decoding="async"
           loading="lazy"
           src="https://i.imgur.com/kk2edgP.png"
-         alt="Advanced Workflows" />
+          alt="Advanced Workflows"
+        />
         <div class="space-content flex flex-col justify-center">
           <h2>Advanced Workflows</h2>
           <p class="text-2xl" data-astro-cid-b4koausq="">
             With the help of <b
-              ><a target="_blank"  href="https://github.com/42coders/workflows"
-                >42coders/workflows</a
-              >
+              ><a target="_blank" href="https://github.com/42coders/workflows">42coders/workflows</a>
             </b>
             in our platform you will be able to use drag and drop to build workflows for your mail campaigns.
           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white dark:bg-gray-900">
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6" >
+      <div class="grid space-y-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0" >
+        <div >
+          <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+            Compare Laravel Mail to other platforms on the market
+          </h2>
+          <p class="mb-4 text-gray-500 dark:text-gray-400 sm:text-xl">
+            Here at Laravel company, we focus on markets where technology, innovation, and capital can unlock long-term value and drive
+            economic growth.
+          </p><a
+            href="#"
+            class="text-primary-600 hover:text-primary-700 dark:text-primary-500 dark:hover:text-primary-400 inline-flex items-center font-medium sm:text-lg"
+            >Learn what makes Laravel Mail different&nbsp;<svg
+              class="ml-1 h-5 w-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+        <div >
+          <a
+            href="#"
+            class="border-primary-600 dark:border-primary-500 mb-6 flex items-center justify-between rounded-lg border-l-8 bg-white p-4 shadow hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700"
+          >
+            <div >
+              <span class="mb-1 block text-xs font-medium uppercase text-gray-500 dark:text-gray-400"
+                >Added Workflow</span
+              ><span class="text-primary-600 dark:text-primary-500 text-xl font-semibold">Laravel Mail vs SendPortal</span>
+            </div>
+            <svg
+              class="text-primary-600 dark:text-primary-500 h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a><a
+            href="#"
+            class="mb-6 flex items-center justify-between rounded-lg border-l-8 border-purple-600 bg-white p-4 shadow hover:bg-gray-50 dark:border-purple-500 dark:bg-gray-800 dark:hover:bg-gray-700"
+          >
+            <div >
+              <span class="mb-1 block text-xs font-medium uppercase text-gray-500 dark:text-gray-400"
+                >
+                Email Intelligence
+              </span
+              ><span class="text-xl font-semibold text-purple-600 dark:text-purple-500">Laravel Mail vs MailCoach</span>
+            </div>
+            <svg
+              class="h-6 w-6 text-purple-600 dark:text-purple-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a><a
+            href="#"
+            class="flex items-center justify-between rounded-lg border-l-8 border-teal-600 bg-white p-4 shadow hover:bg-gray-50 dark:border-teal-500 dark:bg-gray-800 dark:hover:bg-gray-700"
+          >
+            <div >
+              <span class="mb-1 block text-xs font-medium uppercase text-gray-500 dark:text-gray-400"
+                >Modern and intuitive ui</span
+              ><span class="text-xl font-semibold text-teal-600 dark:text-teal-500">Laravel Mail vs Meet</span>
+            </div>
+            <svg
+              class="h-6 w-6 text-teal-600 dark:text-teal-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -122,14 +368,16 @@ import Feature from '../components/Feature.astro'
           decoding="async"
           loading="lazy"
           src="https://i.imgur.com/hEqlA2l.png"
-          alt="Advanced Workflows" />
+          alt="Advanced Workflows"
+        />
         <div class="space-content flex flex-col justify-center">
           <h2>Email Intelligence</h2>
           <p class="text-2xl" data-astro-cid-b4koausq="">
-            Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity superhero in a container!
-           </p>
-           <p class="text-xl" data-astro-cid-b4koausq="">
-             Help understand better your clients and get more insights using the power of spiderfoot osint tool.
+            Unleash the power of Docker to run risk assessments and check your users' email addresses—like a
+            cybersecurity superhero in a container!
+          </p>
+          <p class="text-xl" data-astro-cid-b4koausq="">
+            Help understand better your clients and get more insights using the power of spiderfoot osint tool.
           </p>
         </div>
       </div>

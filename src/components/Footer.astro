@@ -20,11 +20,15 @@ let footer: any = []
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-M680WV2J7G"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  window.dataLayer = window.dataLayer || []
 
-  gtag('config', 'G-M680WV2J7G');
+  function gtag() {
+    dataLayer.push(arguments)
+  }
+
+  gtag('js', new Date())
+
+  gtag('config', 'G-M680WV2J7G')
 </script>
 <!-- Hotjar Tracking Code for https://laravelmail.com -->
 <script>
@@ -43,11 +47,21 @@ let footer: any = []
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=')
 </script>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N3N6ZKFN');</script>
+<script>
+  ;(function (w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({
+      'gtm.start': new Date().getTime(),
+      event: 'gtm.js',
+    })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', 'GTM-N3N6ZKFN')
+</script>
 <!-- End Google Tag Manager -->
 
 <footer style="margin-top: 2vh" class="container mx-auto mt-10 pb-10">
@@ -60,7 +74,7 @@ let footer: any = []
     class="border-main flex flex-col gap-4 border-t border-dashed pt-6 sm:flex-row-reverse sm:items-center sm:justify-between"
   >
     <div class="flex flex-wrap gap-x-4 gap-y-1">
-     <a
+      <a
         class="inline-flex items-center justify-center text-sm hover:underline hover:underline-offset-2"
         href="https://join.slack.com/t/laravelmail/shared_invite/zt-2pjzclfup-2BD3DsjE_LheSOsJSHY~Cw"
         target="_blank"
@@ -77,7 +91,10 @@ let footer: any = []
       </a>
     </div>
     <p class="text-sm">
-      © 2024  <a class="hover:underline hover:underline-offset-2" href="https://phpteacher.com">Stefan</a> & <a class="hover:underline hover:underline-offset-2" href="https://marmureanu.ro">Andrei</a>. All rights reserved.
+      © 2024 <a class="hover:underline hover:underline-offset-2" href="https://phpteacher.com">Stefan</a> & <a
+        class="hover:underline hover:underline-offset-2"
+        href="https://marmureanu.ro">Andrei</a
+      >. All rights reserved.
     </p>
   </div>
 </footer>
