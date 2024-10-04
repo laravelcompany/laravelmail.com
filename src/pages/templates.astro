@@ -22,7 +22,7 @@ const templates = data.data; // Extract 'data' array from JSON
       <!-- Loop through the templates and display them as cards -->
       <div class="template-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {templates.map(template => (
-          <a target="_blank" rel="nofollow" href={"templates/" +template.slug+ ".html"} class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <a target="_blank" rel="nofollow" href={"/templates/" +template.slug+ ".html"} class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <!-- Dynamically add an image preview if available, else use a placeholder -->
             <img loading="lazy" class="object-cover w-full rounded-t-lg h-48 md:h-64" src={ 'https://api.unlayer.com/v2/stock-templates/' + template.slug + '/thumbnail'} alt={template.name} />
 
