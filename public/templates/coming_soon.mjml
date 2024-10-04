@@ -1,0 +1,87 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text color="#fff"></mj-text>
+      <mj-all font-family="'Cabin', 'Helvetica', 'Arial', sans-serif"></mj-all>
+    </mj-attributes>
+    <mj-font href="https://fonts.googleapis.com/css?family=DM+Serif+Display:normal,italic,bold&display=swap" name="DM Serif Display"></mj-font>
+    <mj-font href="https://fonts.googleapis.com/css?family=Cabin:normal,italic,bold&display=swap" name="Cabin"></mj-font>
+  </mj-head>
+  <mj-body background-color="#0E2C4C">
+    <mj-section padding="48px">
+      <mj-column padding="0">
+        <mj-image align="left" padding="0px" src="https://cdn.getvero.com/dd-editor/templates/coming-soon/logo.png" width="40px"></mj-image>
+        <mj-spacer height="40px"></mj-spacer>
+        <mj-image fluid-on-mobile="true" padding="0px" src="https://cdn.getvero.com/dd-editor/templates/coming-soon/hero.png"></mj-image>
+        <mj-spacer height="32px"></mj-spacer>
+        <mj-text font-family="'DM Serif Display', 'Georgia', 'Times New Roman', serif" font-size="48px" line-height="1.25" padding="0px">
+          Coming soon
+        </mj-text>
+        <mj-spacer height="16px"></mj-spacer>
+        <mj-text font-family="'Cabin', 'Helvetica', 'Arial', sans-serif" font-size="26px" line-height="1.5" padding="0px">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+        </mj-text>
+        <mj-spacer height="56px"></mj-spacer>
+        <mj-button background-color="#0E2C4C" border-radius="0px" border="2px solid #fff" font-family="'DM Serif Display', 'Georgia', 'Times New Roman', serif" font-size="24px" line-height="1.75" padding="0px" width="100%">
+          Register your interest
+        </mj-button>
+        <mj-spacer height="24px"></mj-spacer>
+        <mj-text font-size="18px" line-height="1.5" padding="0px">
+          Offer valid from excepteur sint occaecat cupidatat non.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color="#F5B1B1" padding="48px">
+      <mj-column padding="0">
+        <mj-text color="#0e2c4c" font-family="'DM Serif Display', 'Georgia', 'Times New Roman', serif" font-size="40px" line-height="1.25" padding="0px">
+          Callout your product
+        </mj-text>
+        <mj-spacer height="40px"></mj-spacer>
+        <mj-image align="left" padding="0px" src="https://cdn.getvero.com/dd-editor/templates/coming-soon/icon.png" width="56px"></mj-image>
+        <mj-spacer height="12px"></mj-spacer>
+        <mj-text color="#0e2c4c" font-size="20px" line-height="1.5" padding="0px">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </mj-text>
+        <mj-divider border-color="#0e2c4c" border-width="2px" padding-bottom="32px" padding-left="0" padding-right="0" padding-top="32px" padding="10px 0"></mj-divider>
+        <mj-image align="left" padding="0px" src="https://cdn.getvero.com/dd-editor/templates/coming-soon/icon.png" width="56px"></mj-image>
+        <mj-spacer height="12px"></mj-spacer>
+        <mj-text color="#0e2c4c" font-size="20px" line-height="1.5" padding="0px">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </mj-text>
+        <mj-divider border-color="#0e2c4c" border-width="2px" padding-bottom="32px" padding-left="0" padding-right="0" padding-top="32px" padding="10px 0"></mj-divider>
+        <mj-image align="left" padding="0px" src="https://cdn.getvero.com/dd-editor/templates/coming-soon/icon.png" width="56px"></mj-image>
+        <mj-spacer height="12px"></mj-spacer>
+        <mj-text color="#0e2c4c" font-size="20px" line-height="1.5" padding="0px">
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-bottom="32px" padding-left="48px" padding-right="48px" padding-top="80px" padding="48px">
+      <mj-column padding="0">
+        <mj-text font-family="'DM Serif Display', 'Georgia', 'Times New Roman', serif" font-size="40px" line-height="1.25" padding="0px">
+          Your product slogan
+        </mj-text>
+        <mj-spacer height="12px"></mj-spacer>
+        <mj-text font-size="18px" line-height="1.5" padding="0px">
+          Offer valid from excepteur sint occaecat cupidatat non.
+        </mj-text>
+        <mj-spacer height="32px"></mj-spacer>
+        <mj-button background-color="#0E2C4C" border-radius="0px" border="2px solid #fff" font-family="'DM Serif Display', 'Georgia', 'Times New Roman', serif" font-size="24px" line-height="1.75" padding="0px" width="100%">
+          Register your interest
+        </mj-button>
+        <mj-spacer height="80px"></mj-spacer>
+        <mj-divider border-color="#fff" border-width="2px" padding-bottom="0px" padding-left="0" padding-right="0" padding-top="0px" padding="10px 0"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-bottom="64px" padding-left="48px" padding-right="48px" padding-top="32px" padding="20px">
+      <mj-column padding="0">
+        <mj-image align="left" padding="0px" src="https://cdn.getvero.com/dd-editor/templates/coming-soon/logo.png" width="40px"></mj-image>
+      </mj-column>
+      <mj-column padding="0">
+        <mj-text align="right" font-size="14px" line-height="1.5" padding="0px">
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br /><br />Unsubscribe
+        </mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
