@@ -1,0 +1,42 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Feature from '../components/Feature.astro'
+import CallToAction from '../components/CallToAction.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="Features">
+
+  <section class="my-64">
+    <div class="container">
+      <h1 class="mb-16 text-6xl">Tools</h1>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:tailwind" title="Laravel Mailgun">
+          Laravel Mail has the ability to send emails using the Mailgun API including transactional email, email templates, and more.
+        </Feature>
+        <Feature icon="mdi:wheelchair-accessibility" title="Laravel Email Verification">
+         Out platform comes with a powerful email verification system that allows you to easily verify your users' email addresses.
+        </Feature>
+        <Feature icon="mdi:looks" title="Multiple workspaces">
+          Easily handle multiple workspaces or teams through a single interface.
+        </Feature>
+        <Feature icon="mdi:eslint" title="Laravel Mail Send">
+          Using the power of docker you will be able to run risk assessments and check for your users' email addresses.
+        </Feature>
+        <Feature icon="mdi:language-markdown" title="Message Tracking">
+          Automatically track message sending, opens, clicks, bounces and unsubscribes for each campaign.
+        </Feature>
+        <Feature icon="mdi:theme-light-dark" title="Multiple workspaces">
+          Fully integrated Dark mode gives your users the choice for their favorite viewing mode.
+        </Feature>
+        <Feature icon="mdi:cog" title="Design Workflows">
+          Design workflows to help you build your email marketing faster.
+        </Feature>
+        <Feature icon="mdi:lighthouse" title="Lighthouse Scores">
+          Excellent lighthouse scores means your website will load faster and get better SEO rankings.
+        </Feature>
+      </div>
+    </div>
+  </section>
+
+</DefaultLayout>

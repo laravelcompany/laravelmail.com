@@ -2,19 +2,15 @@
 import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import { Card, Pagination } from 'accessible-astro-components'
 
-export async function getStaticPaths({ paginate }) {
-  const response = await fetch('https://club.autodoc.co.uk/api/v4/instructions/all?order_key=popular&order_type=desc&q=&maker_id=16&type=1&limit=1000&offset=0')
-  const data = await response.json()
+/**
+   @todo: Add blog from local content
+  **/
 
-  return paginate(data, { pageSize: 6 })
-}
-
-const { page } = Astro.props
 ---
 
 <DefaultLayout
   title="Blog"
-  description="An example of a blog with dynamic content fetched from JSONPlaceholder using the title, body and userId."
+  description="Learn about marketing and branding, and how to build a successful business."
 >
   <section class="my-12">
     <div class="space-content container">
@@ -28,31 +24,22 @@ const { page } = Astro.props
   </section>
   <section class="my-12">
     <div class="container">
-      <p class="text-sm"><em>Post {page.start + 1} through {page.end + 1} of {page.total} total posts</em></p>
+      <p class="text-sm">
+        Some of the posts are from the <a href="https://jsonplaceholder.typicode.com/">JSONPlaceholder</a> API.
+      </p>
       <ul class="my-3">
-        {
-          page.data.map((post) => (
-            <li>
-              <Card
-                url={'/blog/' + post.title.replaceAll(' ', '-').toLowerCase()}
-                title={post.title}
-                footer={'userId:' + post.userId}
-              >
-                {post.body}
-              </Card>
-            </li>
-          ))
-        }
+        <li>
+          <Card
+            url={'/blog/'}
+            title={'title'}
+            footer={'userId:'}
+          >
+            Some very long text that is repeated to demonstrate the use of the Card component.
+          </Card>
+        </li>
       </ul>
       <div class="mt-12 grid place-content-center">
-        <Pagination
-          firstPage={page.url.prev ? '/blog' : null}
-          previousPage={page.url.prev ? page.url.prev : null}
-          nextPage={page.url.next ? page.url.next : null}
-          lastPage={page.url.next ? `/blog/${Math.round(page.total / page.size)}` : null}
-          currentPage={page.currentPage}
-          totalPages={Math.round(page.total / page.size)}
-        />
+        Pagination goes here
       </div>
     </div>
   </section>

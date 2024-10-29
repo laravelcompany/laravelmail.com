@@ -13,28 +13,31 @@ import Feature from '../components/Feature.astro'
           We didn't reinvent the wheel
         </h2>
         <p class="mb-4 text-2xl">
-          Built on the <b class="text-accent-regular">Sendportal.io</b> core and supercharged with the 42coders workflow
+          Built on the <b class="text-accent-regular">Sendportal.io</b> core and supercharged with the <b>
+          42coders workflow
+        </b>
           package, this product lets you create smart workflows with conditions for effortless automation.
         </p>
       </div>
       <div class="mt-8 grid grid-cols-2 gap-4">
         <img class="w-full rounded-lg" src="https://sendportal.io/img/sendportal.png" alt="sendportal.io" />
+
         <img
           class="mt-4 w-full rounded-lg lg:mt-10"
           src="https://raw.githubusercontent.com/42coders/workflows/master/resources/img/42workflows.png"
-          alt="office content 2"
+          alt="42 workflows"
         />
       </div>
     </div>
   </section>
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">Features</h2>
+      <h2 class="mb-16 text-6xl" title="Features laravel mail">Features</h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="mdi:tailwind" title="Self Hosted">
-          Since this is a community driven project, we are self hosting the application. This means that you can host it
-          on your own server. This application can run on any server, including a VPS, a cloud server, or even a
-          raspberry server.
+          Since this is a community driven project, we are self hosting the application.
+          This means that you can host it
+          on your own server. This application can run on any server, including a VPS, a cloud server, or even a raspberry server.
         </Feature>
         <Feature icon="mdi:wheelchair-accessibility" title="Save Money">
           One short word sending email is free and there should be no cost for you to send your email campaigns.
@@ -47,9 +50,8 @@ import Feature from '../components/Feature.astro'
           Unleash the power of Docker to run risk assessments and check your users' email addresses—like a cybersecurity
           superhero in a container!
         </Feature>
-        <Feature icon="mdi:language-markdown" title="Rest Api">
-          Plug into Laravel Mail with ease using a super-flexible REST API—it's like connecting two puzzle pieces, but
-          way more satisfying!
+        <Feature icon="mdi:wheelchair-accessibility" title="">
+          <img class="w-full rounded-lg" src="https://reacher.email/img/reacher-logo.svg" alt="sendportal.io" />
         </Feature>
         <Feature icon="mdi:cog" title="Design Workflows">
           Design email workflows with the help of laravel workflow package much easier than before.
@@ -59,6 +61,9 @@ import Feature from '../components/Feature.astro'
         </Feature>
         <Feature icon="mdi:cog" title="Campaign Management">
           Send campaigns to all of your subscribers, or custom segments. Create your own beautiful templates.
+        </Feature>
+        <Feature icon="mdi:cog" title="Email Validation">
+          Open-Source Email Verification API using reacherhq . Prevent bounced emails with world-class email verification.
         </Feature>
       </div>
     </div>
@@ -93,7 +98,7 @@ import Feature from '../components/Feature.astro'
     <div class="container">
       <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
         <div class="space-content flex flex-col justify-center">
-          <h2>GrapesJS Editor.</h2>
+          <h3>GrapesJS Editor.</h3>
           <p class="text-2xl">
             With the help of <b
               ><a target="_blank" rel="noopener noreferrer" href="https://grapesjs.com/">GrapesJS</a>
