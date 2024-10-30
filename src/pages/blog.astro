@@ -1,10 +1,7 @@
 ---
-import DefaultLayout from '../../layouts/DefaultLayout.astro'
-import { Card, Pagination } from 'accessible-astro-components'
 
-/**
-   @todo: Add blog from local content
-  **/
+import { Card, Pagination } from 'accessible-astro-components'
+import DefaultLayout from '../layouts/DefaultLayout.astro'
 
 ---
 
@@ -16,9 +13,7 @@ import { Card, Pagination } from 'accessible-astro-components'
     <div class="space-content container">
       <h1>Blog</h1>
       <p class="text-2xl">
-        An example of a blog with dynamic content fetched from <a href="https://jsonplaceholder.typicode.com/posts"
-          >JSONPlaceholder</a
-        > using the title, body and userId. The Accessible Astro Card Component is used here to display al the posts.
+   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras element
       </p>
     </div>
   </section>
@@ -30,8 +25,8 @@ import { Card, Pagination } from 'accessible-astro-components'
       <ul class="my-3">
         <li>
           <Card
-            url={'/blog/'}
-            title={'title'}
+            title="Post 1"
+            url={'/blog/post-1'}
             footer={'userId:'}
           >
             Some very long text that is repeated to demonstrate the use of the Card component.
