@@ -9,6 +9,8 @@ import expressiveCode from "astro-expressive-code";
 // https://astro.build/config
 export default defineConfig({
   compressHTML: true,
+  output: "server",
+  
   integrations: [expressiveCode(), mdx(), icon(), tailwind({
     applyBaseStyles: false
   }), compress()]

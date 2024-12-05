@@ -1,0 +1,46 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+import data from '../../data/data.json';
+
+// Get the slug from the URL params.
+const { slug } = Astro.params;
+
+// Find the matching template from the data.
+const template = data.data.find(template => template.slug === slug);
+
+if (!template) {
+  throw new Error(`Template with slug "${slug}" not found`);
+}
+---
+
+<DefaultLayout title={template.name}>
+  <section class="my-32">
+    <div class="container mx-auto">
+      <h1 class="mb-8 text-5xl font-bold text-center">{template.name}</h1>
+
+      <div class="text-center">
+        <img 
+          src={'https://api.unlayer.com/v2/stock-templates/' + template.slug + '/thumbnail'} 
+          alt={template.name} 
+          class="object-cover mx-auto rounded-lg h-64" 
+        />
+      </div>
+
+      <div class="mt-8 p-8 bg-white shadow-md rounded-lg">
+        <p class="text-lg text-gray-600">
+          <strong>Rating:</strong> {template.rating}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Type:</strong> {template.type}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Votes:</strong> 
+          2 stars: {template.votes['2'] || 0}, 
+          3 stars: {template.votes['3'] || 0}, 
+          4 stars: {template.votes['4'] || 0}, 
+          5 stars: {template.votes['5'] || 0}
+        </p>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

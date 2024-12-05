@@ -45,7 +45,7 @@ class TemplateManager:
             content = content.replace(placeholder, img_tag, 1)
 
         # Replace <title> with the template name if found
-        content = re.sub(r'<title>.*?</title>', f'<title>Free laravel mail template for  {template_name}</title> | laravelmail.com ', content)
+        content = re.sub(r'<title>.*?</title>', f'<title>Free laravel mail template for  {template_name} | laravelmail.com </title> ', content)
         
         # If no <title> is found, add one with the template name
         if not re.search(r'<title>', content):
