@@ -1,6 +1,6 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro';
-import data from '../../data/data.json';
+import db from '../../data/data.json';
 
 // Get the slug from the URL params.
 const { slug } = Astro.params;
@@ -8,15 +8,19 @@ const { slug } = Astro.params;
 console.log(slug);
 
 // Find the matching template from the data.
-const template = data.data.find(template => template.slug === slug);
+const template = db.data.find(template => template.slug === slug);
 console.log(template);
+const data = await fetch('http://0.0.0.0:11001/templates/' + template.slug ).then((response) =>
+  response.text()
+);
+
 
 ---
 
-<DefaultLayout title={template.name}>
+<DefaultLayout title={'Free laravel mail template - ' + template.name}>
   <section class="my-32">
     <div class="container mx-auto">
-      <h1 class="mb-8 text-5xl font-bold text-center">{template.name}</h1>
+      <h1 class="mb-8 text-5xl font-bold text-center">Free laravel mail template - {template.name}</h1>
 
       <div class="text-center">
         <img 
@@ -26,7 +30,10 @@ console.log(template);
         />
       </div>
 
-      <div class="mt-8 p-8 bg-white shadow-md rounded-lg">
+      <div class="mt-8 p-8  shadow-md rounded-lg">
+        <p class="text-lg text-gray-600">
+          <strong>Description:</strong> {template.description} 
+        </p>
         <p class="text-lg text-gray-600">
           <strong>Rating:</strong> {template.rating}
         </p>
@@ -41,6 +48,8 @@ console.log(template);
           5 stars: {template.votes['5'] || 0}
         </p>
       </div>
+      <iframe srcdoc={data} style="width: 100vw; height:65vh;margin-top:20px;" class="shadow-md rounded-lg" />
+ 
     </div>
   </section>
 </DefaultLayout>

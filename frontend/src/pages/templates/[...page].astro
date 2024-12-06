@@ -20,8 +20,7 @@ import data from '../../data/data.json'; // Import JSON data
       <div class="template-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.data.map(template => (
           <a 
-            target="_blank" 
-            rel="nofollow" 
+            title={"free email template for " + template.name}
             href={"/templates/" + template.slug} 
             class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
           >

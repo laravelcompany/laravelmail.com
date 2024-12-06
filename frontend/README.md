@@ -1,20 +1,3 @@
-# Laravel Mail Website
+# Laravel Mail 
 
-## Development
-
-```bash
-npm install
-npm run dev
-```
-
-## Build
-
-```bash
-npm run build
-``` 
-
-## Deploy
-
-```bash
-npm run deploy
-```
+This is the source code for the **frontend** located at (https://laravelmail.com)[https://laravelmail.com].

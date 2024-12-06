@@ -8,6 +8,7 @@
 			"previewUrl": null,
 			"name": "Labor Day Parade",
 			"slug": "labor-day-parade",
+			"description": "Discover the Labor Day Invitation email template, a highly-rated (4.5 stars) design perfect for your next holiday campaign. This free, non-premium template is optimized for Laravel Mail, ensuring easy integration into your project. ",
 			"votes": {
 				"2": 1,
 				"3": 1,
@@ -22,6 +23,7 @@
 			"rating": 4.5,
 			"previewUrl": null,
 			"name": "Labor Day Invitation",
+			"description": "Create stunning Labor Day invitations with our free, highly-rated (4.5 stars) email template. Easily integrate it into your Laravel Mail project using the labor-day-invitation slug.",			
 			"slug": "labor-day-invitation",
 			"votes": {
 				"2": 1,
