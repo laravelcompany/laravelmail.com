@@ -5,12 +5,12 @@ import data from '../../data/data.json';
 // Get the slug from the URL params.
 const { slug } = Astro.params;
 
+console.log(slug);
+
 // Find the matching template from the data.
 const template = data.data.find(template => template.slug === slug);
+console.log(template);
 
-if (!template) {
-  throw new Error(`Template with slug "${slug}" not found`);
-}
 ---
 
 <DefaultLayout title={template.name}>
