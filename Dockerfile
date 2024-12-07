@@ -30,10 +30,7 @@ WORKDIR /home/backend
 COPY backend . 
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt \
-    && pip install fastapi-versioning pymupdf4llm python-multipart yake tls_client uvicorn litellm asent spacyfishing\
-    && python3 -m nltk.downloader -d /usr/local/share/nltk_data wordnet punkt stopwords vader_lexicon \
-    && python3 -m spacy download en_core_web_md \
-    && python3 -m textblob.download_corpora
+    && pip install fastapi-versioning pymupdf4llm python-multipart yake tls_client uvicorn litellm asent spacyfishing
 
 # Clean up
 RUN apt-get autoremove -y \
