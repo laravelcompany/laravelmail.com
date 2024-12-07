@@ -1,0 +1,47 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+import data from '../../data/data.json'; // Import JSON data
+
+---
+
+<DefaultLayout title="Free Newsletter Templates">
+  <section class="my-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">
+        Free Laravel Mail Templates
+      </h2>
+      <p class="mb-8 text-gray-500 dark:text-gray-400 sm:text-xl">
+        Discover over 1000 free Laravel mail templates to get you started.
+        <br>
+        No credit card required.
+      </p>
+
+      <!-- Loop through the templates and display them as cards -->
+      <div class="template-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {data.data.map(template => (
+          <a 
+            title={"free email template for " + template.name}
+            href={"/templates/" + template.slug} 
+            class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          >
+            <img 
+              loading="lazy" 
+              class="object-cover w-full rounded-t-lg h-48 md:h-64" 
+              src={'https://api.unlayer.com/v2/stock-templates/' + template.slug + '/thumbnail'} 
+              alt={template.name} 
+            />
+            <div class="flex flex-col justify-between p-4 leading-normal">
+              <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{template.name}</h5>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Rating: {template.rating}</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Votes: 2 stars: {template.votes['2'] || 0}, 3 stars: {template.votes['3'] || 0}, 
+                4 stars: {template.votes['4'] || 0}, 5 stars: {template.votes['5'] || 0}
+              </p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Type: {template.type}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

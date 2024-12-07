@@ -1,0 +1,55 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+import db from '../../data/data.json';
+
+// Get the slug from the URL params.
+const { slug } = Astro.params;
+
+console.log(slug);
+
+// Find the matching template from the data.
+const template = db.data.find(template => template.slug === slug);
+console.log(template);
+const data = await fetch('http://0.0.0.0:11001/templates/' + template.slug ).then((response) =>
+  response.text()
+);
+
+
+---
+
+<DefaultLayout title={'Free laravel mail template - ' + template.name}>
+  <section class="my-32">
+    <div class="container mx-auto">
+      <h1 class="mb-8 text-5xl font-bold text-center">Free laravel mail template - {template.name}</h1>
+
+      <div class="text-center">
+        <img 
+          src={'https://api.unlayer.com/v2/stock-templates/' + template.slug + '/thumbnail'} 
+          alt={template.name} 
+          class="object-cover mx-auto rounded-lg h-64" 
+        />
+      </div>
+
+      <div class="mt-8 p-8  shadow-md rounded-lg">
+        <p class="text-lg text-gray-600">
+          <strong>Description:</strong> {template.description} 
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Rating:</strong> {template.rating}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Type:</strong> {template.type}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Votes:</strong> 
+          2 stars: {template.votes['2'] || 0}, 
+          3 stars: {template.votes['3'] || 0}, 
+          4 stars: {template.votes['4'] || 0}, 
+          5 stars: {template.votes['5'] || 0}
+        </p>
+      </div>
+      <iframe srcdoc={data} style="width: 100vw; height:65vh;margin-top:20px;" class="shadow-md rounded-lg" />
+ 
+    </div>
+  </section>
+</DefaultLayout>

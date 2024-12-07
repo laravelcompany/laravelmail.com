@@ -7,15 +7,16 @@ import Footer from '../components/Footer.astro'
 
 const {
   title = 'Laravel Mail',
-  subtitle = 'The missing laravel mail package - laravelmail.com',
-  description = 'Community inspired mail package for your laravel application.Reduce your mail costs and focus on your business.',
+  subtitle = 'open source email marketing platform - laravelmail.com',
+  description = 'Community inspired mail platform for your laravel application. Reduce your marketing costs and focus on your business.',
   url = 'https://laravelmail.com',
-  image = 'https://i.imgur.com/ljnK4Ok.png',
-  author = 'Stefan ',
+  image = 'favicon.svg',
+  author = 'Stefan Bogdanel',
 } = Astro.props
 ---
 <html lang="en" dir="ltr">
   <head>
+    <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -28,7 +29,7 @@ const {
     <SiteMeta
       title={title}
       subtitle={subtitle}
-      description={description.substring(0, 100)}
+      description={description.substring(0, 250)}
       url={url}
       image={image}
       author={author}
