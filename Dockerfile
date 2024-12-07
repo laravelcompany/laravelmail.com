@@ -30,7 +30,7 @@ WORKDIR /home/backend
 COPY backend . 
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt \
-    && pip install fastapi-versioning pymupdf4llm python-multipart yake tls_client uvicorn litellm asent spacyfishing
+    && pip install fastapi-versioning pymupdf4llm python-multipart yake tls_client uvicorn litellm
 
 # Clean up
 RUN apt-get autoremove -y \
