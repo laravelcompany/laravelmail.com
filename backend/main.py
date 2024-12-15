@@ -54,7 +54,7 @@ class TemplateManager:
         # Replace <meta name="description"> with a template description
         content = re.sub(
             r'<meta\s+name="description"\s+content=".*?"\s*/>',
-            f'<meta name="description" content="{template_name} description." />',
+            f'<meta name="description" content="{template_name} free email template." />',
             content
         )
         
