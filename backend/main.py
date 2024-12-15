@@ -54,13 +54,13 @@ class TemplateManager:
         # Replace <meta name="description"> with a template description
         content = re.sub(
             r'<meta\s+name="description"\s+content=".*?"\s*/>',
-            f'<meta name="description" content="{template_name} free email template." /><script defer src="https://analytics.izdrail.com/script.js" data-website-id="cf5caa0b-8345-4f76-885f-b6e5b4af5ba3"></script>',
+            f'<meta name="description" content="{template_name} free email template." />',
             content
         )
         
         # If no <meta description> is found, add one with the template name
         if not re.search(r'<meta\s+name="description"', content):
-            content = f'<meta name="description" content="{template_name} description." /><script defer src="https://analytics.izdrail.com/script.js" data-website-id="cf5caa0b-8345-4f76-885f-b6e5b4af5ba3"></script>' + content
+            content = f'<meta name="description" content="{template_name} description." />' + content
 
         return content
 
