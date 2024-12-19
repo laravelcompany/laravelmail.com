@@ -5,10 +5,8 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 ---
 
 <DefaultLayout title="Home">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-  <script>hljs.highlightAll();</script>
+
+
   <div class="container">
 
     <h1 class="text-3xl font-bold mb-4">
@@ -19,8 +17,28 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
     <p class="text-xl">
       Please note that this is a work in progress and the image is not yet ready for production use.
     </p>
+
+    <p> You can try the application live at <a
+      class="button has-icon color-secondary"
+      target="_blank"
+      href="https://app.laravelmail.com/login">
+    Live App
+    </a></p>
+
+    <p>
+      For login and register, please use the following credentials:
+    </p>
+
+    <pre class="text-xl mt-4">
+      <code class="language-html">
+        username: marketing@laravelmail.com
+        password: secret
+      </code>
+    </pre>
+
+
     <p class="text-xl">
-      You can try out the Laravel Mail Docker image by running the docker-compose.yml file below:
+      You can run a local copy of the application by using the latest docker version 
     </p>
 
     <pre class="text-xl mt-4">
@@ -29,7 +47,7 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
         services:
           app.laravelmail.com:
             container_name: app.laravelmail.com
-            image: laravelmail/app.laravelmail.com:latest
+            image: izdrail/app.laravelmail.com:latest
       </code>
     </pre>
 
