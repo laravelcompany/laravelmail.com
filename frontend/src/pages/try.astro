@@ -6,50 +6,98 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 
 <DefaultLayout title="Home">
 
+  <div class="container mx-auto px-4 py-8 max-w-4xl">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl mb-4">Introducing Laravel Mail</h1>
+        <p class="text-xl  italic">A Holiday Gift to the Developer Community</p>
+    </header>
 
-  <div class="container">
+    <div class="prose lg:prose-xl mx-auto">
+        <div class="mb-10">
+            <p class="lead ">
+                As snowflakes dance in the winter air, we're unveiling something extraordinary this holiday season—Laravel Mail, 
+                a groundbreaking open-source email marketing platform that promises to transform how developers and businesses 
+                connect with their audiences.
+            </p>
+        </div>
 
-    <h1 class="text-3xl font-bold mb-4">
-      Try it out
-    </h1>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">A Platform Born from Community Innovation</h2>
+            <p class="">
+                Emerging from the creative fusion of <span class="font-semibold">SendPortal.io</span> and the sophisticated 
+                <span class="font-semibold">42workflows package</span>, Laravel Mail represents a watershed moment in email 
+                marketing technology. This isn't just another platform; it's a testament to collaborative innovation, built 
+                by developers who understand your needs, for professionals who demand excellence.
+            </p>
+        </section>
 
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Revolutionary Features that Define the Future</h2>
+            <p class="mb-4">Imagine an email marketing platform that breaks free from traditional constraints:</p>
+            
+            <div class="shadow-lg rounded-lg p-6 mb-6">
+                <ul class="list-none space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span><strong>Host with Complete Autonomy:</strong> Whether on a sleek VPS or a modest Raspberry Pi, Laravel Mail adapts to your infrastructure.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span><strong>Financial Freedom:</strong> Wave goodbye to prohibitive pricing tiers.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        <span><strong>Intelligence Meets Innovation:</strong> Powered by Docker and enhanced by Reacher Email Validation.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-    <p class="text-xl">
-      Please note that this is a work in progress and the image is not yet ready for production use.
-    </p>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold  mb-4">Experience the Innovation</h2>
+            <div class="p-6 rounded-lg">
+                <p class="font-semibold mb-4">Visit: <a href="https://app.laravelmail.com/login" class="text-blue-600 hover:text-blue-800">laravelmail.com</a></p>
+                <div class=" p-4 rounded shadow-sm">
+                    <h3 class="text-lg font-semibold mb-2">Demo Access:</h3>
+                    <p class="mb-1"><strong>Username:</strong> marketing@laravelmail.com</p>
+                    <p><strong>Password:</strong> secret</p>
+                </div>
+            </div>
+        </section>
 
-    <p> You can try the application live at <a
-      class="button has-icon color-secondary"
-      target="_blank"
-      href="https://app.laravelmail.com/login">
-    Live App
-    </a></p>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold  mb-4">Local Deployment</h2>
+            <div class="bg-gray-900 text-gray-100 p-6 rounded-lg">
+                <pre class="language-yaml"><code>version: '3.8'
+services:
+app.laravelmail.com:
+container_name: app.laravelmail.com
+image: izdrail/app.laravelmail.com:latest</code></pre>
+            </div>
+        </section>
 
-    <p>
-      For login and register, please use the following credentials:
-    </p>
-
-    <pre class="text-xl mt-4">
-      <code class="language-html">
-        username: marketing@laravelmail.com
-        password: secret
-      </code>
-    </pre>
-
-
-    <p class="text-xl">
-      You can run a local copy of the application by using the latest docker version 
-    </p>
-
-    <pre class="text-xl mt-4">
-      <code class="language-html">
-        version: '3.8'
-        services:
-          app.laravelmail.com:
-            container_name: app.laravelmail.com
-            image: izdrail/app.laravelmail.com:latest
-      </code>
-    </pre>
-
-  </div>
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">A New Chapter in Email Marketing</h2>
+            <p class=" mb-6">
+                This holiday season, we're not just launching a platform; we're igniting a movement. Laravel Mail represents 
+                our commitment to democratizing email marketing through open-source innovation.
+            </p>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
+                <p class="italic text-gray-700">
+                    From our Laravel family to yours, may your holidays be filled with inspiration, and may the coming year 
+                    bring unprecedented success in all your endeavors.
+                </p>
+                <p class="mt-4 font-semibold text-gray-900">With warmest regards,<br>
+                <a href="https://laravelcompany.com">Laravel Company Essex</a>
+                </p>
+            </div>
+        </section>
+    </div>
+</div>
 </DefaultLayout>
