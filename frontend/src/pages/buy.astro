@@ -1,0 +1,83 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+
+
+---
+
+<DefaultLayout title="Buy a Holiday Gift">
+
+  <div class="container mx-auto px-4 py-8 max-w-4xl">
+    <header class="text-center mb-12">
+        <h1 class="text-4xl mb-4">Buy Laravel Mail</h1>
+        <p class="text-xl  italic">Buy a copy of Laravel Mail</p>
+    </header>
+ 
+    <section class="">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
+          <div class="mx-auto max-w-screen-lg text-center">
+            <h2 class="mb-2 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Frequently Asked Questions</h2>
+            <p class="mb-8 text-gray-500 dark:text-gray-400 lg:text-lg">Discover answers to the most common questions about our software, policies, and support.</p>
+          </div>
+          <div class="grid border-t border-gray-200 pt-8 text-left dark:border-gray-700 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-16">
+            <div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What do you mean by "App assets"?</h3>
+                <p class="text-gray-500 dark:text-gray-400">You will have access to the full App project, including all pages, components, responsive designs, icons, illustrations, and images.</p>
+              </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What does "lifetime access" mean?</h3>
+                <p class="text-gray-500 dark:text-gray-400">When you purchase a package, you get access to all future updates outlined in the roadmap, free of charge.</p>
+              </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">How does support work?</h3>
+                <p class="text-gray-500 dark:text-gray-400">Support is provided directly by the authors who developed this software. For any issues, please email <a href="mailto:stefan@izdrail.com" class="font-medium text-primary-600 underline hover:no-underline dark:text-primary-500">stefan@izdrail.com</a>.</p>
+              </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What is your refund policy?</h3>
+                <p class="text-gray-500 dark:text-gray-400">As this is software, we offer a partial refund of 50% if requested within 30 days. Refunds will be processed within 90 days. Please contact us at <a href="mailto:stefan@izdrail.com" class="font-medium text-primary-600 underline hover:no-underline dark:text-primary-500">stefan@izdrail.com</a> to request a refund.</p>
+              </div>
+            </div>
+            <div>
+                <div>
+
+                    <script async
+                    src="https://js.stripe.com/v3/buy-button.js">
+                  </script>
+                  
+                  <stripe-buy-button
+                    buy-button-id="buy_btn_1QY1BZEYoTMW8nQ8QxYIQCrA"
+                    publishable-key="pk_live_51QOVQ4EYoTMW8nQ8NvHF0h9Wqp93segUEDLmNqb6q19L2XdHYLCmwKz6ONehzb7aUTpEtsUWbFxQXhsDbxAgvB2K008VgtShrv"
+                  >
+                  </stripe-buy-button>
+                            </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">Can I use the software for multiple projects?</h3>
+                <p class="text-gray-500 dark:text-gray-400">Yes, you can use it for unlimited projects, including personal, SaaS, or client websites, as long as you don't create a product that competes directly with ours.</p>
+              </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What does the free version include?</h3>
+                <p class="text-gray-500 dark:text-gray-400">The free version includes basic style guidelines, component variants, and a dashboard page with mobile support. It is open-source under the MIT license.</p>
+              </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What is the difference between this software and competitors?</h3>
+                <p class="text-gray-500 dark:text-gray-400">Our software is designed with unique UI elements, extra components, and specialized tools for application, marketing, and e-commerce interfaces.</p>
+              </div>
+            </div>
+            <div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">Where can I access my download files?</h3>
+                <p class="text-gray-500 dark:text-gray-400">After purchase, you’ll receive an email with download links. Soon, downloads will also be available from your account dashboard.</p>
+              </div>
+              <div class="mb-10">
+                <h3 class="mb-4 text-lg font-medium text-gray-900 dark:text-white">Can I use design assets like fonts and illustrations?</h3>
+                <p class="text-gray-500 dark:text-gray-400">Yes, all included assets are licensed for use. Feel free to integrate them into your projects.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      
+
+</div>
+</DefaultLayout>
