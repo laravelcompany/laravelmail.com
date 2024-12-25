@@ -53,8 +53,10 @@ const data = await fetch('http://0.0.0.0:11001/templates/' + template.slug).then
           id="downloadBtn"
           class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
           data-template={data}
+          data-umami-event-title="Download html code "
+          data-umami-event-url={template.slug}
           data-filename={template.slug + '.html'}
-        >
+        >   
           Download HTML Source Code
         </button>
       </div>
