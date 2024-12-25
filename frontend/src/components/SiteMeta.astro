@@ -3,6 +3,21 @@ import { ViewTransitions } from 'astro:transitions'
 
 const { title, description, url, image, author, subtitle } = Astro.props
 
+// Get the current URL parts
+const currentPath = Astro.url.pathname;
+const siteUrl = Astro.site?.toString() || 'https://yoursite.com'; // Add your default site URL here
+
+// Safely construct the canonical URL
+let canonicalURL;
+try {
+    // Remove trailing slash from site URL and leading slash from pathname to avoid double slashes
+    const baseUrl = siteUrl.replace(/\/$/, '');
+    const path = currentPath.replace(/^\//, '');
+    canonicalURL = `${baseUrl}/${path}`;
+} catch (error) {
+    console.error('Error constructing canonical URL:', error);
+    canonicalURL = siteUrl; // Fallback to base site URL
+}
 ---
 
 <!-- general meta -->
@@ -10,16 +25,24 @@ const { title, description, url, image, author, subtitle } = Astro.props
 <meta name="description" content={description} />
 <meta name="author" content={author} />
 
+<!-- canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content="index, follow" />
+
 <!-- open graph -->
 <meta property="og:title" content={`${title} - ${subtitle}`} />
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
-<meta property="og:url" content={url} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:image" content={Astro.site ? `${Astro.site}${image}` : image} />
 
 <!-- twitter card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={`${title} - ${subtitle}`} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={Astro.site ? `${Astro.site}${image}` : image} />
 
 <!-- page title -->
 <title>{title} - {subtitle}</title>
 
-<ViewTransitions></ViewTransitions>
+<ViewTransitions />
