@@ -6,6 +6,26 @@ import Feature from '../components/Feature.astro'
 
 <DefaultLayout title="Home">
   <Hero />
+  <section class="my-64">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
+        <img
+          style="border: 1vw solid;border-image: linear-gradient(to right, #F58140, #4b1e4e ) 0.8;"
+          class="rounded-lg"
+          decoding="async"
+          loading="lazy"
+          src="https://i.imgur.com/kk2edgP.png"
+          alt="Email marketing automation logo"
+        />
+        <div class="space-content flex flex-col justify-center">
+          <h2>Build Automated Email Campaigns with Drag and Drop</h2>
+          <p class="text-2xl">
+            <a href="https://github.com/laravelcompany" target="_blank">Laravel Mail</a> empowers you to create email marketing workflows using a user-friendly drag-and-drop interface.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="bg-white dark:bg-gray-900">
     <div class="mx-auto max-w-screen-xl items-center gap-16 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16">
       <div class="font-light text-gray-500 dark:text-gray-400 sm:text-lg">
@@ -235,30 +255,7 @@ import Feature from '../components/Feature.astro'
       </div>
     </div>
   </section>
-  <section class="my-64">
-    <div class="container">
-      <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
-        <img
-          style="border: 1vw solid;border-image: linear-gradient(to right, #F58140, #4b1e4e ) 0.8;"
-          class="rounded-lg"
-          decoding="async"
-          loading="lazy"
-          src="https://i.imgur.com/kk2edgP.png"
-          alt="Email marketing automation logo"
-        />
-        <div class="space-content flex flex-col justify-center">
-          <h2>Email Automation</h2>
-          <p class="text-2xl" data-astro-cid-b4koausq="">
-            With the help of <b
-              >
-            <a target="_blank" href="https://github.com/42coders/workflows">42workflows</a>
-            </b>
-            in our platform you will be able to use drag and drop to build workflows for your mail campaigns.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <section class="bg-white dark:bg-gray-900">
     <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6" >
       <div class="grid space-y-8 lg:grid-cols-2 lg:gap-12 lg:space-y-0" >
