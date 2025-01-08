@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro'
 import Feature from '../components/Feature.astro'
 ---
 
-<DefaultLayout title="Home">
+<DefaultLayout title="Laravel Mail App">
   <Hero />
   <section class="my-64">
     <div class="container">
@@ -18,9 +18,9 @@ import Feature from '../components/Feature.astro'
           alt="Email marketing automation logo"
         />
         <div class="space-content flex flex-col justify-center">
-          <h2>Build Automated Email Campaigns with Drag and Drop</h2>
+          <h2>Build <i>Automated Email Campaigns</i> with Drag and Drop</h2>
           <p class="text-2xl">
-            <a href="https://github.com/laravelcompany" target="_blank">Laravel Mail</a> empowers you to create email marketing workflows using a user-friendly drag-and-drop interface.
+            <a href="https://github.com/laravelcompany" target="_blank">Laravel Mail</a> empowers you to create <b>email marketing workflows</b> using a user-friendly drag-and-drop interface.
           </p>
         </div>
       </div>
@@ -84,7 +84,7 @@ import Feature from '../components/Feature.astro'
   </section>
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl" title="Features laravel mail">Features</h2>
+      <h2 class="mb-16 text-6xl" title="Features laravel mail">Features - Laravel Mail </h2>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
         <Feature icon="mdi:tailwind" title="Self Hosted">
           Since this is a community driven project, we are self hosting the application.
@@ -350,49 +350,42 @@ import Feature from '../components/Feature.astro'
       </div>
     </div>
   </section>
+
+
+
   <section class="my-64">
     <div class="container">
       <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
-        <div class="space-content flex flex-col justify-center">
-          <h2>Advanced Imports.</h2>
-          <p class="text-2xl">
-            With a very powerful csv importer you will be able to import any contacts to your platform.
-          </p>
-        </div>
         <img
-          alt="advanced csv import"
-          style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;"
-          class="rounded-lg"
-          decoding="async"
-          loading="lazy"
-          src="https://i.imgur.com/Oy1Wa0R.png"
-        />
+        alt="advanced csv import"
+        style="border: 1vw solid;border-image: linear-gradient(to right, #4b1e4e, #F58140) 1;"
+        class="rounded-lg"
+        decoding="async"
+        loading="lazy"
+        src="https://i.imgur.com/Oy1Wa0R.png"
+      />
+        <div class="space-content flex flex-col justify-center">
+          <h2>Self Hosted Email Marketing Platform for Laravel</h2>
+          <p class="text-2xl">
+            Powerful email marketing, automations and transactional emails, seamlessly integrated into your Laravel application.
+          </p>
+          <p>
+            Laravel Mail Self-Hosted lets you manage your contact lists and send marketing, automated and transactional emails from within Laravel.
+          </p>
+          <p>
+            Send marketing emails with all the features you need—including segmentation, split testing, and helpful analytics.
+Automate your email marketing and create powerful workflows for onboarding or generating leads.
+Edit, send and track transactional emails directly in Laravel Mail
+You can use Laravel Mail Self-Hosted as a standalone application, or integrate it into your Laravel application. To send emails, you’ll have to set up your own email provider, such as Amazon SES, Sendgrid, Mailgun, or Postmark.
+          </p>
+          
+          <a href="https://app.laravelmail.com" class="btn btn-primary">Get Started</a>
+        </div>
+      
       </div>
     </div>
   </section>
-  <section class="bg-white dark:bg-gray-900 text-center">
-    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
-      <div class="max-w-screen-lg">
-        <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
-          Email Marketing Platform for Laravel
-        </h2>
-        <p class="mb-8 text-gray-500 dark:text-gray-400 sm:text-xl text-center">
-          Laravel Mail is the <b>best laravel mail package</b>. It is a fully <b>featured mail package</b> built for growing creators, developers, and businesses
-          . It is built with the latest technologies and is easy to use.
-        </p>
 
-        Boosting your<b> email functionality</b> is essential for any <b>Laravel developer</b> looking to create a seamless user experience. 
 
-        <b>Email communication</b> is an integral part of modern web applications, whether it's sending transactional emails, notifications, or even building email marketing campaigns. 
-        
-        With Laravel Mail, you have a powerful tool at your disposal that simplifies the process of sending emails and offers a host of features that enhance the functionality. 
-        
-        We cover everything you need to know, from setting up mail drivers and configuring SMTP servers to sending plain text and HTML emails. 
-        
-        We have integrated advanced <a href="https://laravelmail.com/features">features</a> like queues, attachments, and email templates, ensuring you have a solid  Laravel Mail's platform .
-
-      </div>
-    </div>
-  </section>
  
 </DefaultLayout>
