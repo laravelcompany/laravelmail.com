@@ -4,7 +4,7 @@
 current_week=$(date +%V)
 
 # Create the version string
-version="0.$current_week"
+version="0.1.$current_week"
 
 echo "Creating and pushing tag: $version"
 
