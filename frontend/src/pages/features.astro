@@ -7,38 +7,46 @@ import CallToAction from '../components/CallToAction.astro'
 
 <DefaultLayout title="Features">
 
+
   <section class="my-64">
     <div class="container">
-      <h2 class="mb-16 text-6xl">
-        Features 
-      </h2>
+      <h1 class="mb-16 text-6xl">
+        Features of Laravel Mail
+      </h1>
+      <p class="mb-12 text-lg text-gray-700">
+        Laravel Mail is a powerful platform designed to simplify email marketing with advanced features like multi-SMTP support, email verification, and detailed message tracking. Perfect for businesses looking to scale their email outreach effectively.
+      </p>
       <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="mdi:tailwind" title="Multiple smtps">
-          Laravel Mail can be used with multiple SMTP providers like: Mailgun, SendGrid, Postmark, Amazon SES, Zepto Mail.
+        <Feature icon="mdi:tailwind" title="Multiple SMTPs">
+          Integrate seamlessly with popular SMTP providers such as Mailgun, SendGrid, Postmark, Amazon SES, and Zepto Mail. Manage multiple email services effortlessly.
         </Feature>
         <Feature icon="mdi:wheelchair-accessibility" title="Email Verification">
-         Out platform comes out of the box with a powerful <b>self-hostef email verification</b> service that allows you to easily verify your users' email addresses and reduce in this way the number of bounce emails.
-         An example of a email campaign sent to 75 subscribers only 2 emails softly - bounced.
+          Our platform includes a robust <b>self-hosted email verification</b> service to validate email addresses and reduce bounce rates. For example, a campaign sent to 75 subscribers experienced only two soft bounces.
         </Feature>
-        <Feature icon="mdi:looks" title="Multiple workspaces">
-          Our laravel mail platform can easily handle multiple workspaces or teams through a single interface.
+        <Feature icon="mdi:looks" title="Multiple Workspaces">
+          Easily manage multiple workspaces or teams from a single, user-friendly interface, streamlining collaboration and organization.
         </Feature>
         <Feature icon="mdi:eslint" title="Golang MTA">
-          Deliver milions of emails per day using our laravel mail go client and send them directly to your customers.
+          Leverage our Go-based Mail Transfer Agent (MTA) to deliver millions of emails daily, ensuring high reliability and performance.
         </Feature>
         <Feature icon="mdi:eslint" title="Message Tracking">
-          Automatically track message sending, opens, clicks, bounces and unsubscribes for each campaign, better analaytics than sendportal due to our built-in message tracking.
+          Gain valuable insights with advanced analytics, tracking email delivery, opens, clicks, bounces, and unsubscribes. Our built-in message tracking surpasses SendPortal's capabilities.
         </Feature>
-        <Feature icon="mdi:theme-light-dark" title="Multiple Templates">
-          Because we whant to make your life easier we imported already all the email templates from Unilayer.com so you don't have to, enjoy over 1000 templates free.
+        <Feature icon="mdi:theme-light-dark" title="Extensive Email Templates">
+          Access over 1,000 pre-designed email templates imported from Unlayer.com. Simplify your email campaigns with ready-to-use, customizable designs.
         </Feature>
-        <Feature icon="mdi:cog" title="Workflows">
-          Design email marketing workflows to help you build your business faster with automation, Curentlly we support Wordpress, Magento, Shopify more automation workflows are available for your discrection to create using laravel.
+        <Feature icon="mdi:cog" title="Workflows and Automation">
+          Create efficient email marketing workflows to grow your business faster. Our platform supports integrations with WordPress, Magento, and Shopify. Additional workflow automation can be customized using Laravel.
         </Feature>
-
+        <Feature icon="mdi:cog" title="Asterix Integration">
+          By release 0.5 we will added Asterix to our platform. Asterix is a powerful IPBX solution to manage and host your own Voip solution.
+        </Feature>
       </div>
     </div>
   </section>
+
+
+
   <CallToAction />
 
 </DefaultLayout>
