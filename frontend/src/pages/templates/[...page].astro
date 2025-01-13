@@ -2,25 +2,32 @@
 import DefaultLayout from '../../layouts/DefaultLayout.astro';
 import data from '../../data/data.json'; // Import JSON data
 
+const defaultDescription = "Explore our collection of free Laravel newsletter templates, optimized for developers. Get started with Laravel templates today!";
 ---
 
-<DefaultLayout title="Free Newsletter Templates">
+<DefaultLayout title="Find free Laravel newsletter templates, trusted by 45,000 developers. Start with our curated collection of over 10,000 free email templates for Laravel projects.">
+
   <section class="my-32">
     <div class="container">
-      <h2 class="mb-16 text-6xl">
-        Free Laravel Mail Templates
-      </h2>
+      <h1 class="mb-16 text-6xl font-bold">
+        Free Laravel Newsletter Templates
+      </h1>
       <p class="mb-8 text-gray-500 dark:text-gray-400 sm:text-xl">
-        Discover over 1000 <b>free Laravel mail templates</b> to get you started.
-        <br>
-        No credit card required.
+        Join 45,000 developers who trust Laravel Mail for their projects. Our collection offers over 10,000 free Laravel templates to keep you updated with the latest Laravel news, tutorials, community links, and more.
+      </p>
+      <p class="mb-12 text-gray-500 dark:text-gray-400 sm:text-lg">
+        Discover <strong>free Laravel newsletter templates</strong> that are easy to use and require no credit card. Start building your Laravel projects today!
+
+        <i>
+          <small>Laravel templates, free Laravel newsletter templates, Laravel email templates, Laravel mail templates, Laravel developers</small>
+        </i>
       </p>
 
       <!-- Loop through the templates and display them as cards -->
       <div class="template-list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.data.map(template => (
           <a 
-            title={"free email template for " + template.name}
+            title={"Free laravel email template for " + template.name}
             href={"/templates/" + template.slug} 
             class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
           >
@@ -28,10 +35,13 @@ import data from '../../data/data.json'; // Import JSON data
               loading="lazy" 
               class="object-cover w-full rounded-t-lg h-48 md:h-64" 
               src={'https://api.unlayer.com/v2/stock-templates/' + template.slug + '/thumbnail'} 
-              alt={template.name} 
+              alt={"Thumbnail of " + template.name} 
             />
             <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{template.name}</h5>
+              <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">{template.name}</h2>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                {template.description || defaultDescription}
+              </p>
               <p class="text-sm text-gray-500 dark:text-gray-400">Rating: {template.rating}</p>
               <p class="text-sm text-gray-500 dark:text-gray-400">Type: {template.type}</p>
             </div>
