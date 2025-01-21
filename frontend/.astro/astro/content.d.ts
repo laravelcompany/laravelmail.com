@@ -151,163 +151,114 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"docs": {
-"api/campaigns.mdx": {
-	id: "api/campaigns.mdx";
-  slug: "api/campaigns";
+"Custom Components/Callout.mdx": {
+	id: "Custom Components/Callout.mdx";
+  slug: "custom-components/callout";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"api/introduction.mdx": {
-	id: "api/introduction.mdx";
-  slug: "api/introduction";
+"Custom Components/Card.mdx": {
+	id: "Custom Components/Card.mdx";
+  slug: "custom-components/card";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"api/subscribers-tags.mdx": {
-	id: "api/subscribers-tags.mdx";
-  slug: "api/subscribers-tags";
+"Custom Components/index.mdx": {
+	id: "Custom Components/index.mdx";
+  slug: "custom-components";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"api/subscribers.mdx": {
-	id: "api/subscribers.mdx";
-  slug: "api/subscribers";
+"Guides/authoring-content-in-md.mdx": {
+	id: "Guides/authoring-content-in-md.mdx";
+  slug: "guides/authoring-content-in-md";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"api/tags-subscribers.mdx": {
-	id: "api/tags-subscribers.mdx";
-  slug: "api/tags-subscribers";
+"Guides/authoring-content-in-mdx.mdx": {
+	id: "Guides/authoring-content-in-mdx.mdx";
+  slug: "guides/authoring-content-in-mdx";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"api/tags.mdx": {
-	id: "api/tags.mdx";
-  slug: "api/tags";
+"Guides/breadcrumbs.mdx": {
+	id: "Guides/breadcrumbs.mdx";
+  slug: "guides/breadcrumbs";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"api/templates.mdx": {
-	id: "api/templates.mdx";
-  slug: "api/templates";
+"Guides/index.mdx": {
+	id: "Guides/index.mdx";
+  slug: "guides";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"email-services/aws.mdx": {
-	id: "email-services/aws.mdx";
-  slug: "email-services/aws";
+"Guides/pages.mdx": {
+	id: "Guides/pages.mdx";
+  slug: "guides/pages";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"email-services/introduction.mdx": {
-	id: "email-services/introduction.mdx";
-  slug: "email-services/introduction";
+"Guides/sidebar-navigation.mdx": {
+	id: "Guides/sidebar-navigation.mdx";
+  slug: "guides/sidebar-navigation";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"email-services/postmark.mdx": {
-	id: "email-services/postmark.mdx";
-  slug: "email-services/postmark";
+"Guides/site-search.mdx": {
+	id: "Guides/site-search.mdx";
+  slug: "guides/site-search";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"email-services/sendgrid.mdx": {
-	id: "email-services/sendgrid.mdx";
-  slug: "email-services/sendgrid";
+"Guides/table-of-contents.mdx": {
+	id: "Guides/table-of-contents.mdx";
+  slug: "guides/table-of-contents";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"features/campaigns.mdx": {
-	id: "features/campaigns.mdx";
-  slug: "features/campaigns";
+"Reference/configuration-ref.mdx": {
+	id: "Reference/configuration-ref.mdx";
+  slug: "reference/configuration-ref";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"features/imports.mdx": {
-	id: "features/imports.mdx";
-  slug: "features/imports";
+"Reference/frontmatter-ref.mdx": {
+	id: "Reference/frontmatter-ref.mdx";
+  slug: "reference/frontmatter-ref";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"features/inbox.mdx": {
-	id: "features/inbox.mdx";
-  slug: "features/inbox";
+"Resources/deployment.mdx": {
+	id: "Resources/deployment.mdx";
+  slug: "resources/deployment";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"features/messages.mdx": {
-	id: "features/messages.mdx";
-  slug: "features/messages";
+"Resources/index.mdx": {
+	id: "Resources/index.mdx";
+  slug: "resources";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
-"features/osint.mdx": {
-	id: "features/osint.mdx";
-  slug: "features/osint";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"features/subscribers.mdx": {
-	id: "features/subscribers.mdx";
-  slug: "features/subscribers";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"features/tags.mdx": {
-	id: "features/tags.mdx";
-  slug: "features/tags";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"features/templates.mdx": {
-	id: "features/templates.mdx";
-  slug: "features/templates";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"features/workflows.mdx": {
-	id: "features/workflows.mdx";
-  slug: "features/workflows";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"features/workspaces.mdx": {
-	id: "features/workspaces.mdx";
-  slug: "features/workspaces";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"getting-started/installation.mdx": {
-	id: "getting-started/installation.mdx";
-  slug: "getting-started/installation";
-  body: string;
-  collection: "docs";
-  data: InferEntrySchema<"docs">
-} & { render(): Render[".mdx"] };
-"getting-started/package-instalation.mdx": {
-	id: "getting-started/package-instalation.mdx";
-  slug: "getting-started/package-instalation";
+"Resources/site-showcase.mdx": {
+	id: "Resources/site-showcase.mdx";
+  slug: "resources/site-showcase";
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
@@ -318,6 +269,176 @@ declare module 'astro:content' {
   body: string;
   collection: "docs";
   data: InferEntrySchema<"docs">
+} & { render(): Render[".mdx"] };
+};
+"real-docs": {
+"api/campaigns.mdx": {
+	id: "api/campaigns.mdx";
+  slug: "api/campaigns";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"api/introduction.mdx": {
+	id: "api/introduction.mdx";
+  slug: "api/introduction";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"api/subscribers-tags.mdx": {
+	id: "api/subscribers-tags.mdx";
+  slug: "api/subscribers-tags";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"api/subscribers.mdx": {
+	id: "api/subscribers.mdx";
+  slug: "api/subscribers";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"api/tags-subscribers.mdx": {
+	id: "api/tags-subscribers.mdx";
+  slug: "api/tags-subscribers";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"api/tags.mdx": {
+	id: "api/tags.mdx";
+  slug: "api/tags";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"api/templates.mdx": {
+	id: "api/templates.mdx";
+  slug: "api/templates";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"email-services/aws.mdx": {
+	id: "email-services/aws.mdx";
+  slug: "email-services/aws";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"email-services/introduction.mdx": {
+	id: "email-services/introduction.mdx";
+  slug: "email-services/introduction";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"email-services/postmark.mdx": {
+	id: "email-services/postmark.mdx";
+  slug: "email-services/postmark";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"email-services/sendgrid.mdx": {
+	id: "email-services/sendgrid.mdx";
+  slug: "email-services/sendgrid";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/campaigns.mdx": {
+	id: "features/campaigns.mdx";
+  slug: "features/campaigns";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/imports.mdx": {
+	id: "features/imports.mdx";
+  slug: "features/imports";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/inbox.mdx": {
+	id: "features/inbox.mdx";
+  slug: "features/inbox";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/messages.mdx": {
+	id: "features/messages.mdx";
+  slug: "features/messages";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/osint.mdx": {
+	id: "features/osint.mdx";
+  slug: "features/osint";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/subscribers.mdx": {
+	id: "features/subscribers.mdx";
+  slug: "features/subscribers";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/tags.mdx": {
+	id: "features/tags.mdx";
+  slug: "features/tags";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/templates.mdx": {
+	id: "features/templates.mdx";
+  slug: "features/templates";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/workflows.mdx": {
+	id: "features/workflows.mdx";
+  slug: "features/workflows";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"features/workspaces.mdx": {
+	id: "features/workspaces.mdx";
+  slug: "features/workspaces";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"getting-started/index.mdx": {
+	id: "getting-started/index.mdx";
+  slug: "getting-started";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"getting-started/installation.mdx": {
+	id: "getting-started/installation.mdx";
+  slug: "getting-started/installation";
+  body: string;
+  collection: "real-docs";
+  data: any
+} & { render(): Render[".mdx"] };
+"getting-started/package-instalation.mdx": {
+	id: "getting-started/package-instalation.mdx";
+  slug: "getting-started/package-instalation";
+  body: string;
+  collection: "real-docs";
+  data: any
 } & { render(): Render[".mdx"] };
 };
 

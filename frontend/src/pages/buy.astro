@@ -1,397 +1,362 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import { Image } from 'astro:assets';
+import { CheckCircle, BarChart2, Mail, Shield, Users, Zap } from 'lucide-react';
+// SEO Metadata
+const title = "Professional Email Marketing Platform for Laravel";
+const description = "Enterprise-grade email marketing platform with multi-SMTP support, advanced automation, and 800+ blade templates. Perfect for Laravel developers and businesses.";
+// Features Data
+const features = [
+{
+icon: "mail",
+title: "Multi-SMTP Integration",
+description: "Seamlessly integrate with multiple SMTP providers including Gmail, Amazon SES, and custom SMTP servers."
+},
+{
+icon: "zap",
+title: "Advanced Automation",
+description: "Create sophisticated email workflows for onboarding, lead nurturing, and customer engagement."
+},
+{
+icon: "chart",
+title: "Header-Based Tracking",
+description: "Advanced email tracking using header-based technology, providing accurate engagement metrics."
+},
+{
+icon: "shield",
+title: "Enterprise Security",
+description: "Bank-grade encryption, SPF/DKIM support, and comprehensive security features."
+}
+];
+// JSON-LD Schema
+const schema = {
+"@context": "https://schema.org",
+"@type": "SoftwareApplication",
+"name": "Laravel Email Marketing Platform",
+"applicationCategory": "BusinessApplication",
+"operatingSystem": "Web-based",
+"offers": {
+"@type": "Offer",
+"price": "599.00",
+"priceCurrency": "USD",
+"description": "One-time payment for lifetime access"
+},
+"features": [
+"Multi-SMTP Integration",
+"Advanced Automation",
+"Header-Based Tracking",
+"Enterprise Security",
+"800+ Laravel Blade Templates"
+]
+};
 ---
-
-<DefaultLayout title="Buy our email marketing platform built for Laravel">
-  <div class="container mx-auto px-4 py-8 max-w-4xl">
-    <header class="text-center mb-12">
-      <h1 class="text-4xl mb-4">
-        Email Marketing Platform build for Laravel.
-      </h1>
-      <p class="text-xl italic">
-        Discover a platform that actually works for large campaigns. We didn't reinvent the weel we just made it bettter.
-       
-      </p>
-    </header>
-    <div class="w-full">
-      <section>
-        <div class="mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16 xl:gap-16">
-          <div class="text-gray-500 sm:text-lg">
-            <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-              Why you should buy our email marketing platform built for Laravel.
-            </h2>
+<DefaultLayout title={title}>
+   <!-- SEO Meta Tags -->
+   <meta name="description" content={description} slot="head"/>
+   <meta name="keywords" content="Laravel email marketing, email automation, SMTP integration, email tracking, blade templates" slot="head"/>
+   <link rel="canonical" href="https://yourwebsite.com/email-marketing" slot="head"/>
+   <!-- Open Graph Tags -->
+   <meta property="og:title" content={title} slot="head"/>
+   <meta property="og:description" content={description} slot="head"/>
+   <meta property="og:type" content="website" slot="head"/>
+   <meta property="og:url" content="https://yourwebsite.com/email-marketing" slot="head"/>
+   <!-- Twitter Card Tags -->
+   <meta name="twitter:card" content="summary_large_image" slot="head"/>
+   <meta name="twitter:title" content={title} slot="head"/>
+   <meta name="twitter:description" content={description} slot="head"/>
+   <!-- JSON-LD Schema -->
+   <script type="application/ld+json" set:html={JSON.stringify(schema)} slot="head" />
+      <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden pt-16 pb-20">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+              <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+                Professional Email Marketing
+                <span class="block text-blue-600">Built for Laravel</span>
+              </h1>
+              <p class="mx-auto mt-3 max-w-md text-base text-gray-500 dark:text-gray-300 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
+                Enterprise-grade email marketing platform with advanced automation, multi-SMTP support, and comprehensive analytics. Perfect for Laravel developers and businesses built with laravel framework.
+              </p>
+            </div>
+          </div>
+        </section>
+        
+      
+      
+      <section c>
+      <div class="mx-auto max-w-screen-xl items-center gap-8 px-4 py-8 lg:grid lg:grid-cols-2 lg:px-6 lg:py-16 xl:gap-16">
+         <div class="text-gray-500 sm:text-lg">
+            <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Why you should buy Larave Mail</h2>
             <p class="mb-8 dark:text-gray-400 lg:text-xl">
-              Our platform is the cheapest on the market, has better ui, has automation, uses golang for smtp clients. 
+              Because it is a powerful and flexible email marketing platform that can be used to send mass emails, marketing emails, and more.
             </p>
             <div class="grid gap-8 border-t border-gray-200 py-8 dark:border-gray-700 sm:grid-cols-2 lg:grid-cols-1">
-              <div class="flex">
-                <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
-                  <svg
-                    class="h-7 w-7 text-gray-900 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                    Multiple Smtps
-                  </h3>
-                  <p class="text-gray-500 dark:text-gray-400">
-                    You can use multiple smtp providers like: gmail, yahoo, etc.
-                  </p>
-                </div>
-              </div>
-              <div class="flex">
-                <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
-                  <svg
-                    class="h-7 w-7 text-gray-900 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                    Better Automation
-                  </h3>
-                  <p class="text-gray-500 dark:text-gray-400">
-                    Unlike in <b>MailCoach</b> we have powerful workflows for onboarding, generating leads, or anything else you have in mind—no coding skills needed.
-                  </p>
-                </div>
-              </div>
-              <div class="flex">
-                <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
-                  <svg
-                    class="h-7 w-7 text-gray-900 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                    Better Tracking
-                  </h3>
-                  <p class="text-gray-500 dark:text-gray-400">
-                    We track our email using email headers wich allows us to not relly on the clasic cookies.
-                  </p>
-                </div>
-              </div>
-              <div class="flex">
-                <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
-                  <svg
-                    class="h-7 w-7 text-gray-900 dark:text-gray-400"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                    Multiple Mail Domains
-                  </h3>
-                  <p class="text-gray-500 dark:text-gray-400">
-                    Use multiple domains to send emails to multiple recipients using smtp rotation.
-                  </p>
-                </div>
-              </div>
+               <div class="flex">
+                  <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
+                     <svg class="h-7 w-7 text-gray-900 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clip-rule="evenodd"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Capaigns analysis</h3>
+                     <p class="text-gray-500 dark:text-gray-400">Track your campaigns straight into Google Tag Manager using the new G4 implementation and server side events.</p>
+                  </div>
+               </div>
+               <div class="flex">
+                  <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
+                     <svg class="h-7 w-7 text-gray-900 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Muliple SMTP</h3>
+                     <p class="text-gray-500 dark:text-gray-400">Improve your delivery rate using the multi smtp option with custom quota settins for each email service.</p>
+                  </div>
+               </div>
+               <div class="flex">
+                  <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
+                     <svg class="h-7 w-7 text-gray-900 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Multiple channels</h3>
+                     <p class="text-gray-500 dark:text-gray-400">
+                        Laravel Mail Platform Supports multiple channels for communication from email to Voice using Wisper Ai implementation.
+                     </p>
+                  </div>
+               </div>
+               <div class="flex">
+                  <div class="mr-4 flex h-12 w-12 shrink-0 items-center justify-center rounded bg-white shadow dark:bg-gray-700">
+                     <svg class="h-7 w-7 text-gray-900 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h3 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">Audience analysis</h3>
+                     <p class="text-gray-500 dark:text-gray-400">Benchmark your company against the industry to inform your growth strategy and analyze market trends.</p>
+                  </div>
+               </div>
             </div>
-          </div>
-          <div class="flex flex-row rounded-lg p-6  xl:p-8">
-            <script async
-            src="https://js.stripe.com/v3/buy-button.js">
-          </script>
-          
-          <stripe-buy-button
-            buy-button-id="buy_btn_1QY1BZEYoTMW8nQ8QxYIQCrA"
-            publishable-key="pk_live_51QOVQ4EYoTMW8nQ8NvHF0h9Wqp93segUEDLmNqb6q19L2XdHYLCmwKz6ONehzb7aUTpEtsUWbFxQXhsDbxAgvB2K008VgtShrv"
-          >
-          </stripe-buy-button>
-          </div>
-        </div>
-      </section>
-    <section class="relative not-prose scroll-mt-[72px]">
-      <div class="inset-0 absolute pointer-events-none -z-[1]" aria-hidden="true">
-        <div class="inset-0 absolute"></div>
+         </div>
+         <div class="flex flex-col rounded-lg bg-white p-6 shadow dark:bg-gray-800 xl:p-8">
+            <div class="items-center justify-between md:flex">
+               <div>
+                  <div class="mb-2 flex justify-between">
+                     <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Laravel Mail Platform</h3>
+                     <div class="flex items-center md:hidden">
+                        <div class="mr-1 text-xl font-extrabold text-gray-900 dark:text-white lg:text-5xl">£25</div>
+                        <span class="text-gray-500 dark:text-gray-400">/licence</span>
+                     </div>
+                  </div>
+                  <p class="text-lg text-gray-500 dark:text-gray-400 md:mr-2">Best for large scale uses and extended redistribution rights.</p>
+               </div>
+               <div class="hidden md:block">
+                  <div class="text-2xl font-extrabold text-gray-900 dark:text-white lg:text-5xl">£25</div>
+                  <span class="text-gray-500 dark:text-gray-400">per licence</span>
+               </div>
+            </div>
+              <div class="mt-8 width-full">
+                <script async
+                src="https://js.stripe.com/v3/buy-button.js">
+              
+   </script>
+   <stripe-buy-button style="width: 100%;"
+      buy-button-id="buy_btn_1QY1BZEYoTMW8nQ8QxYIQCrA"
+      publishable-key="pk_live_51QOVQ4EYoTMW8nQ8NvHF0h9Wqp93segUEDLmNqb6q19L2XdHYLCmwKz6ONehzb7aUTpEtsUWbFxQXhsDbxAgvB2K008VgtShrv"
+      >
+   </stripe-buy-button>
+   </div>
+   <div class="justify-between space-y-4 sm:flex sm:space-y-0">
+      <ul class="space-y-4">
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">A/B Testing</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">24/7 Email &amp; Chat Support</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Custom Branding</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Creative Assistant</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Website Builder</span>
+         </li>
+      </ul>
+      <ul class="space-y-4">
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Advanced Segmentation</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Multivariate Testing</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Comparative Reporting</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Custom Templates</span>
+         </li>
+         <li class="flex space-x-2.5">
+            <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span class="leading-tight text-gray-500 dark:text-gray-400">Dynamic Content</span>
+         </li>
+      </ul>
+   </div>
+   </div>
+   </div>
+   </section>
+   <section >
+      <div class="mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16">
+         <div class="rounded-lg bg-white shadow dark:bg-gray-800 lg:grid lg:grid-cols-3">
+            <div class="col-span-2 p-6 lg:p-8">
+               <h2 class="mb-1 text-2xl font-bold text-gray-900 dark:text-white">Templates Bundle</h2>
+               <p class="text-lg text-gray-500 dark:text-gray-400">Best collection of optimied for multiple email clients laravel mail templates in blade format.Get over 1000 email sorted by categories and tags.</p>
+               <div class="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:mt-6">
+                  <ul class="space-y-4 dark:text-white">
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">A/B Testing</span>
+                     </li>
+                   
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Custom Branding</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Creative Assistant</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Website Builder</span>
+                     </li>
+                  </ul>
+                  <ul class="hidden space-y-4 dark:text-white sm:block">
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Customer Builder</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Marketing CRM</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Custom Templates</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Creative Assistant</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Multivariate Testing</span>
+                     </li>
+                  </ul>
+                  <ul class="hidden space-y-4 dark:text-white lg:block">
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Advanced Tools</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Multivariate Testing</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Reporting</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Custom Templates</span>
+                     </li>
+                     <li class="flex space-x-2.5">
+                        <svg class="h-5 w-5 flex-shrink-0 text-green-500 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="leading-tight text-gray-500 dark:text-gray-400">Dynamic Content</span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="flex bg-gray-50 p-6 text-center dark:bg-gray-700 lg:p-8">
+               <div class="w-full self-center">
+                  <div class="text-5xl font-extrabold text-gray-900 dark:text-white">£5</div>
+                  <div class="text-light mb-4 mt-1 text-gray-500 dark:text-gray-400">per bundle</div>
+                  <script async
+                  src="https://js.stripe.com/v3/buy-button.js">
+                </script>
+                
+                <stripe-buy-button
+                  buy-button-id="buy_btn_1Qje3tEYoTMW8nQ8vGFRb5Th"
+                  publishable-key="pk_live_51QOVQ4EYoTMW8nQ8NvHF0h9Wqp93segUEDLmNqb6q19L2XdHYLCmwKz6ONehzb7aUTpEtsUWbFxQXhsDbxAgvB2K008VgtShrv"
+                >
+                </stripe-buy-button>
+               </div>
+            </div>
+         </div>
       </div>
-      <div class="relative mx-auto px-4 lg:py-20 md:px-6 md:py-16 py-12 text-default max-w-6xl">
-        <div class="text-center md:mx-auto mb-8 md:mb-12 max-w-3xl">
-          <p class="font-bold dark:text-blue-200 text-base text-secondary tracking-wide uppercase">FAQs</p>
-          <h2 class="font-bold font-heading leading-tighter tracking-tighter text-heading md:text-4xl text-3xl">
-            Frequently Asked Questions
-          </h2>
-          <p class="text-muted text-xl mt-4">
-            Dive into the following questions to gain insights into the powerful features that Laravel Mail offers and how
-            it can elevate your web development journey.
-          </p>
-        </div>
-
-        <div class="mx-auto gap-8 grid md:gap-y-12 sm:grid-cols-2 gap-y-8">
-          <div>
-            <div class="flex flex-row max-w-none">
-              <div class="flex justify-center">
-                <svg
-                  class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-                  data-icon="tabler:chevron-right"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                >
-                  <use xlink:href="#ai:tabler:chevron-right"></use>
-                </svg>
-              </div>
-              <div class="mt-0.5">
-                <h3 class="font-bold text-xl">Only once fee</h3>
-                <p class="text-muted mt-3">
-                  You get access to updates for a full year. 
-                  After that year you can choose to renew your license when you want. 
-                  If you're satisfied with the current version at that point, you can use the marketing platform forever.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex flex-row max-w-none">
-              <div class="flex justify-center">
-                <svg
-                  class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-                  data-icon="tabler:chevron-right"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                >
-                  <use xlink:href="#ai:tabler:chevron-right"></use>
-                </svg>
-              </div>
-              <div class="mt-0.5">
-                <h3 class="font-bold text-xl">
-                  Can I run this on multiple domains? 
-                </h3>
-                <p class="text-muted mt-3">
-                  Yes, you can.
-                  There is no limit on the number of domains you can use. We even recommend using a multiple domains environement.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Additional FAQ items go here -->
-          <div>
-            <div class="flex flex-row max-w-none">
-              <div class="flex justify-center">
-                <svg
-                  class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-                  data-icon="tabler:chevron-right"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                >
-                  <use xlink:href="#ai:tabler:chevron-right"></use>
-                </svg>
-              </div>
-              <div class="mt-0.5">
-                <h3 class="font-bold text-xl">
-                  Do I have all the templates
-                </h3>
-                <p class="text-muted mt-3">
-                  Yes, you can.
-                  Yes you get all the laravel email templates presented on our websites wich is over 800 <b>laravel mail blade templates</b>.
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-
-
-
-<!-- Additional FAQ items go here -->
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">
-        Refund Policy
-      </h3>
-      <p class="text-muted mt-3">
-        We offer a 50% refund on the total amount paid. This policy is in place as our product is a software solution, and purchasers receive full access to the software's source code upon purchase.
-
-      </p>
-    </div>
-  </div>
-</div>
-
-<!-- Additional FAQ items for protection and clarity -->
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">What happens if I encounter issues after purchase?</h3>
-      <p class="text-muted mt-3">
-        Our support team is available to assist you with any technical issues or questions. You can reach out via our support page, and we will ensure timely resolution of your concerns.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">Is there a guarantee of uptime for the platform?</h3>
-      <p class="text-muted mt-3">
-        While we strive to provide maximum uptime, external SMTP providers or hosting environments may impact performance. We recommend robust hosting solutions and offer troubleshooting guides to minimize downtime.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">Are there any limitations on software usage?</h3>
-      <p class="text-muted mt-3">
-        The software is licensed for your personal or business use. Redistribution, resale, or unauthorized sharing of the source code is strictly prohibited under the terms of the license agreement.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">What security measures are in place?</h3>
-      <p class="text-muted mt-3">
-        Our platform adheres to industry best practices for security. We recommend users implement secure credentials and ensure their hosting environment is properly configured to protect data.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">Can I customize the platform?</h3>
-      <p class="text-muted mt-3">
-        Yes, as you have full access to the source code, you can customize the platform to meet your specific needs. However, modifications may void support for those custom changes.
-      </p>
-    </div>
-  </div>
-</div>
-
-<div>
-  <div class="flex flex-row max-w-none">
-    <div class="flex justify-center">
-      <svg
-        class="text-primary flex-shrink-0 h-6 mr-2 mt-1 rtl:ml-2 rtl:mr-0 w-6"
-        data-icon="tabler:chevron-right"
-        height="1em"
-        viewBox="0 0 24 24"
-        width="1em"
-      >
-        <use xlink:href="#ai:tabler:chevron-right"></use>
-      </svg>
-    </div>
-    <div class="mt-0.5">
-      <h3 class="font-bold text-xl">What is the refund process?</h3>
-      <p class="text-muted mt-3">
-        We offer a 50% refund within 30 days of purchase. Refunds are processed upon verification that the software has not been redistributed or misused.
-      </p>
-    </div>
-  </div>
-</div>
-
-        </div>
-
-
-
-        
-      </div>
-    </section>
-
+   </section>
+   </main>
 </DefaultLayout>
+<style>
+   /* Add any component-specific styles here */
+</style>

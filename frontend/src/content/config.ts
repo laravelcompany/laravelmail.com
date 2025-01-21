@@ -4,7 +4,7 @@ const docs = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
-    author: z.string().default("Laravel Company"),
+    author: z.string().default("Laravel Mail"),
     pubDatetime: z.date().optional(),
     modDatetime: z.date().optional().nullable(),
     description: z.string().optional(),

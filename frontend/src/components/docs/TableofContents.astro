@@ -1,6 +1,6 @@
 ---
-import type { HeadingHierarchy, HeadingProps } from "@/lib/types";
-import { createHeadingHierarchy } from "@/lib/utils";
+import type { HeadingHierarchy, HeadingProps } from "../../lib/types";
+import { createHeadingHierarchy } from "../../lib/utils";
 
 const { headings } = Astro.props as HeadingProps;
 const toc: HeadingHierarchy[] = createHeadingHierarchy(headings ?? []);
