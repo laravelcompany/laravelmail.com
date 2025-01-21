@@ -1,0 +1,19 @@
+{
+    "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+      "types": [
+        "astro/client",
+        "vite-plugin-pwa/vanillajs",
+        "vite-plugin-pwa/info"
+      ],
+      "jsx": "preserve",
+      "paths": {
+        "@/*": [
+          "./src/*"
+        ],
+        "config": [
+          "src/config.ts"
+        ]
+      }
+    }
+  }

@@ -156,77 +156,77 @@ declare module 'astro:content' {
   slug: "campaigns";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "configuration.mdx": {
 	id: "configuration.mdx";
   slug: "configuration";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "deployment.mdx": {
 	id: "deployment.mdx";
   slug: "deployment";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "email-services.mdx": {
 	id: "email-services.mdx";
   slug: "email-services";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "index.mdx": {
 	id: "index.mdx";
   slug: "index";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "messages.mdx": {
 	id: "messages.mdx";
   slug: "messages";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "package-instalation.mdx": {
 	id: "package-instalation.mdx";
   slug: "package-instalation";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "subscribers.mdx": {
 	id: "subscribers.mdx";
   slug: "subscribers";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "tags.mdx": {
 	id: "tags.mdx";
   slug: "tags";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "templates.mdx": {
 	id: "templates.mdx";
   slug: "templates";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 "workspaces.mdx": {
 	id: "workspaces.mdx";
   slug: "workspaces";
   body: string;
   collection: "docs";
-  data: any
+  data: InferEntrySchema<"docs">
 } & { render(): Render[".mdx"] };
 };
 "real-docs": {
@@ -408,5 +408,5 @@ declare module 'astro:content' {
 
 	type AnyEntryMap = ContentEntryMap & DataEntryMap;
 
-	export type ContentConfig = never;
+	export type ContentConfig = typeof import("../../src/content/config.js");
 }
