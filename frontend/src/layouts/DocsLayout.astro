@@ -10,10 +10,8 @@ import { menu, capitalizeFirstLetter } from "../lib/utils";
 import type { DocsLayoutProps } from "../lib/types";
 import { ScrollArea } from "../components/ui/scroll-area";
 import { LOCALE, SITE, docconfig } from ".././config";
-import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-
+import HeadSEO from "../components/core/HeadSEO.astro";
 
 const {
   pubDatetime,
@@ -45,7 +43,10 @@ const {
 
     <!-- favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
+    <HeadSEO
+      title=`Learn how to use Laravel Mail Platform |  ${title ? capitalizeFirstLetter(title) + " |  laravelmail.com" + title : SITE.title}`
+      description={description}
+    />
   </head>
   <body>
     <Header />

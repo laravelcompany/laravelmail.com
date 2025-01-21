@@ -8,7 +8,7 @@ export const SITE = {
   desc: "Discover ",
   title: "Laravel Mail",
   ogImage: "og-image.jpg",
-  repo: "https://github.com/HYP3R00T/CelestialDocs",
+  repo: "https://github.com/laravelcompany/laravelmail.com",
 };
 
 export const LOCALE = {
