@@ -11,7 +11,9 @@ export default defineConfig({
   compressHTML: true,
   output: "server",
   server: { port: 11000, host: true},
-  integrations: [expressiveCode(), mdx(), icon(), tailwind({
+  integrations: [expressiveCode(),  mdx({
+    gfm: true,
+  }), icon(), tailwind({
     applyBaseStyles: false
   }), compress()]
 });
