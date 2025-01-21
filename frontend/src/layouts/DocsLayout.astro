@@ -1,0 +1,165 @@
+---
+import '@astrojs/tailwind/base.css'
+import '../assets/scss/globals.scss'
+
+import SideNavMenu from "../components/docs/SideNavMenu.astro";
+import TableofContent from "../components/docs/TableofContents.astro";
+import MainContent from "../components/docs/MainContent.astro";
+import { menu, capitalizeFirstLetter } from "../lib/utils";
+
+import type { DocsLayoutProps } from "../lib/types";
+import { ScrollArea } from "../components/ui/scroll-area";
+import { LOCALE, SITE, docconfig } from ".././config";
+import Header from '../components/Header.astro'
+import HeadSEO from "../components/core/HeadSEO.astro";
+
+const {
+  pubDatetime,
+  modDatetime,
+  draft,
+  tags,
+  hide_breadcrumbs,
+  hide_toc,
+  hide_sidenav,
+  max_width,
+  headings,
+} = Astro.props as DocsLayoutProps;
+
+const {
+  title = 'Learn how to use Laravel Mail Platform',
+  subtitle = 'self hosted email marketing platform - laravelmail.com',
+  description = 'Community inspired Email Marketing Platform for your Laravel application. Reduce your marketing costs and focus on your business.',
+  url = 'https://laravelmail.com',
+  image = 'favicon.svg',
+  author = 'Stefan Bogdanel',
+} = Astro.props
+---
+<html lang="en" dir="ltr">
+  <head>
+    <!-- Global Metadata -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <HeadSEO
+      title=`Learn how to use Laravel Mail Platform |  ${title ? capitalizeFirstLetter(title) + " |  laravelmail.com" + title : SITE.title}`
+      description={description}
+    />
+  </head>
+  <body>
+    <Header />
+    <main class="flex flex-1 flex-col md:flex-row container">
+      <div
+        class=`py-4 hidden md:flex max-h-static_sidemenu sticky top-[69px] 
+        ${hide_toc && hide_sidenav && max_width ? "w-screen" : "md:px-6 md:w-1/4 lg:w-1/5"}`
+      >
+        <ScrollArea className="h-full w-full" client:only="react">
+          {
+            !docconfig.hide_side_navigations && !hide_sidenav && (
+              <SideNavMenu items={menu} level={0} />
+            )
+          }
+        </ScrollArea>
+      </div>
+      <div
+        class=`w-full ${hide_toc && hide_sidenav && max_width ? "" : "md:w-3/4 lg:w-3/5"}`
+      >
+        <MainContent
+          title={title}
+          author={author}
+          pubDatetime={pubDatetime}
+          modDatetime={modDatetime}
+          description={description}
+          draft={draft}
+          tags={tags}
+          hide_breadcrumbs={hide_breadcrumbs}
+          headings={headings}
+        >
+          <slot />
+        </MainContent>
+      </div>
+      <div
+        class=`py-4 hidden lg:flex max-h-static_sidemenu sticky top-[69px] ${hide_toc && hide_sidenav && max_width ? "" : "px-6 lg:w-1/5"}`
+      >
+        <ScrollArea className="h-full w-full" client:only="react">
+          {
+            !docconfig.hide_table_of_contents && !hide_toc && (
+              <TableofContent {headings} />
+            )
+          }
+        </ScrollArea>
+      </div>
+    </main>
+
+    <style lang="scss" is:global>
+      // theme settings
+      :root {
+        --radius-small: 3px;
+        --radius-large: 6px;
+        --gap-default: 2rem;
+        --font-measure: 70ch;
+        --font-family-default: 'Open Sans', sans-serif;
+        --font-family-special: 'Open Sans', sans-serif;
+        // light theme
+        --font-color: var(--neutral-900);
+        --action-color: var(--primary-300);
+        --action-color-state: var(--primary-500);
+        --background: var(--neutral-100);
+        --primary-background: var(--primary-100);
+        --neutral-background: var(--neutral-200);
+      }
+
+      // dark color scheme overrides
+      .darkmode {
+        --font-color: var(--neutral-100);
+        --action-color: var(--secondary-100);
+        --action-color-state: var(--secondary-500);
+        --background: var(--dark-100);
+        --primary-background: var(--primary-500);
+        --neutral-background: var(--neutral-900);
+      }
+
+      // sticky footer on low content pages
+      html,
+      body {
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        color: var(--font-color);
+        background-color: var(--background);
+
+        main {
+          flex: 1 0 auto;
+        }
+
+        footer {
+          flex-shrink: 0;
+        }
+      }
+
+      pre {
+        padding: 1rem;
+        border-radius: 0.35rem;
+        border: 2px solid var(--action-color);
+      }
+
+      body .pagination a {
+        &:hover,
+        &:focus-visible {
+          background-color: var(--action-color-state);
+
+          svg path {
+            stroke: white;
+          }
+        }
+      }
+    </style>
+
+</body>
+</html>

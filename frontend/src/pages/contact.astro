@@ -3,7 +3,6 @@ import DefaultLayout from '../layouts/DefaultLayout.astro'
 const handleSubmit = async (event) => {
   event.preventDefault();
 
-
   // Get form data
   const formData = new FormData(event.target);
   const email = formData.get('email');
@@ -14,7 +13,7 @@ const handleSubmit = async (event) => {
   const request = new Request('https://automation.izdrail.com/api/v1/webhooks/a9xR5i8yxsBVzMwTJ5zcm', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email,name,message }),
+    body: JSON.stringify({ email, name, message }),
   });
 
   // Send the request
@@ -34,22 +33,44 @@ const handleSubmit = async (event) => {
 ---
 <DefaultLayout title="Contact laravel mail platform - laravelmail.com">
   <section class="my-64">
-      <div class="container">
-        <div class="grid align-center" >
-          <div class="hidden lg:block" >
-            <h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">Points of contact</h3>
-            <h4 class="mb-1 font-medium text-gray-900 dark:text-white">Stefan Bogdanel</h4>
-            <address class="non-italic text-sm font-normal text-gray-500">38 Deidre Avenue,<br>Wickford Essex</address>
-            <h4 class="mb-1 mt-4 font-medium text-gray-900 dark:text-white">Support</h4>
-            <p class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500"><a 
-              data-umami-event-title="Download html code "
-              data-umami-event-url="mailto:stefan@izdrail.com"
-              href="#">stefan@izdrail.com</a></p>
+    <div class="container">
+      <div class="space-y-8 text-center md:grid md:grid-cols-2 md:gap-12 md:space-y-0 lg:grid-cols-3">
+        <div>
+          <div class="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-16 lg:w-16">
+            <svg class="h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
           </div>
-
+          <p class="mb-2 text-xl font-bold dark:text-white">Email us:</p>
+          <p class="mb-3 text-gray-500 dark:text-gray-400">Email us for general queries, including marketing and partnership opportunities.</p>
+          <a href="mailto:support@laravelmail.com" class="font-semibold text-primary-600 hover:underline dark:text-primary-500">stefan@izdrail.com</a>
+        </div>
+        <div>
+          <div class="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-16 lg:w-16">
+            <svg class="h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+          </div>
+          <p class="mb-2 text-xl font-bold dark:text-white">Call us:</p>
+          <p class="mb-3 text-gray-500 dark:text-gray-400">Call us to speak to a member of our team. We are always happy to help.</p>
+          <span class="font-semibold text-primary-600 dark:text-primary-500">+44 744 821 8899</span>
+        </div>
+        <div>
+          <div class="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-16 lg:w-16">
+            <svg class="h-5 w-5 text-gray-600 dark:text-gray-500 lg:h-8 lg:w-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <p class="mb-2 text-xl font-bold dark:text-white">Address</p>
+          <p class="mb-3 text-gray-500 dark:text-gray-400">Deidre Avenue, Wickford,Essex</p>
+          <div class="flex items-center justify-center">
+            <button type="button" class="group flex h-min items-center justify-center p-0.5 text-center font-medium relative focus:z-10 focus:outline-none text-white bg-blue-700 hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 border-0 rounded-lg focus:ring-2 [&amp;>span]:text-primary-600 dark:[&amp;>span]:text-primary-500">
+              <span class="items-stretch flex justify-center bg-white text-gray-900 transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit dark:bg-gray-900 dark:text-white w-full rounded-md text-sm px-4 py-2 border border-transparent">Support center</span>
+            </button>
+          </div>
+        </div>
       </div>
-      </div>
+    </div>
   </section>
 </DefaultLayout>
-
-

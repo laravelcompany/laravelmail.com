@@ -1,9 +1,17 @@
-# Laravel Mail 
+<img alt="Leadscaptain" src="https://leadscaptain.com/images/logo.svg">
 
+# Laravel Mail
 
-## Enterprise Email Solution for Modern Businesses
-Transform Your Email Marketing with Laravel-Powered Intelligence
-Welcome to the next generation of email marketing and management, built specifically for Laravel applications. Our community-inspired mail platform combines enterprise-level features with cost-effective solutions, helping businesses streamline their email operations while maximizing ROI.
+Powerful marketing, automations, Voip communication and transactional emails, seamlessly integrated into your Laravel application.
 
-## Laravel Mail Platform?
-In today’s digital landscape, effective email communication is crucial for business success. Our platform leverages the robust Laravel framework to deliver a comprehensive email solution that scales with your business needs. By reducing mail costs and providing intelligent workflows, we help you focus on what matters most – growing your business.
+- Send marketing emails with all the features you need—including segmentation, split testing, and helpful analytics.
+
+- Track transactional emails directly in Laravel Mail using the automatical tracking system build with Google Tag Manager.
+
+- Send marketing SMS/MMS/RPC with all the unicode characters you need.
+
+- Automate your email marketing and create powerful workflows for onboarding or generating leads.
+
+- Edit, send, and track transactional emails directly in Laravel Mail.
+
+Check our website on how to [Get started](https://laravelmail.com/).

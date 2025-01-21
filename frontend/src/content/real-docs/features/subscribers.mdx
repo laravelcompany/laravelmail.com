@@ -1,0 +1,116 @@
+---
+title: Subscribers
+hide_breadcrumbs: false
+---
+
+## Overview
+
+Subscribers represent individuals that are available to you when sending out campaigns. Subscribers can optionally be assigned one or more [tags](/features/tags).
+
+> The email address for each Subscriber must be unique in each [workspace](/features/workspaces).
+
+## View Subscribers
+
+To view a list of your subscribers, click the _Subscribers_ link in the sidebar. This will take you to the subscribers index page.
+
+### Subscriber Table
+
+Subscribers are listed in a paginated table, where each row represents a different subscriber.
+
+### Filtering Subscribers
+
+The following filtering options are available:
+
+- Subscriber Email and/or Name. Partial matches will also be returned.
+- Subscriber Subscription Status
+
+## Viewing an Individual Subscriber
+
+To view an individual subscriber, head to the subscribers index page and click on the subscriber's email in the table that's presented to you.
+
+### Subscriber Details
+
+Each subscriber's email, first name, last name and subscription status is displayed when viewing an individual subscriber.
+
+In addition, if the subscriber has been assigned any [tags](/features/tags) then these are also displayed.
+
+### Messages
+
+If any messages have been sent to the subscriber, they will be listed in the Messages section.
+
+## Adding and Updating Subscribers
+
+Subscribers can be added and updated in the following ways:
+
+* manually through the application interface
+* via a CSV upload
+* programmatically using the API.
+
+### Application Interface
+
+#### Adding A Subscriber
+
+Navigate to the subscribers index page and click _New Subscriber_.
+
+#### Updating A Subscriber
+
+Click the _Edit_ button on the subscriber's row in the list.
+
+The following information can be saved for each Subscriber:
+
+- email
+- first name (optional)
+- last name (optional)
+- subscription status
+- tags (optional)
+
+### CSV Imports
+
+Laravel Mail allows you to easily import multiple subscribers via a CSV upload. This can be used to create new subscribers and update existing ones.
+
+To import subscribers via CSV, click the _Subscribers_ link in the sidebar. From there, click the overflow menu button and then _Import Subscribers_.
+
+#### CSV File Format
+
+The following fields are available in the CSV.
+
+- `id` (optional) - The ID field is only used when updating existing subscribers, and must be set if you wish to update the subscriber's email address. The `id` field should be present but left empty when importing new subscribers.
+- `email` (required) - A unique email address for the subscriber. Note that if the email address is already present in Laravel Mail, the row will instead update the `first_name` and `last_name` of the existing subscriber.
+- `first_name` (optional) - The subscriber's first name.
+- `last_name` (optional) - The subscriber's last name.
+
+Additionally, the **first row** of the CSV **must** be a header row, where each column is the name as listed above, and must be provided in the order above.
+
+Each row after the header row must represent a single subscriber. Optional fields can be left empty.
+
+> The import page shows an example of a CSV file, with the header and a row.
+
+#### Uploading The File
+
+To upload the file, click the _Browse_ button on the file selector, and choose the file you wish to upload. When you have selected your file, you can click the _Upload_ button to begin the upload process.
+
+#### Tags
+
+Tags can be assigned to subscribers by using the `Tags` selector. If you have any tags available, you can pick which ones to assign here. Note that the chosen tags will apply to all subscribers uploaded in the chosen CSV. It is currently not possible to specify separate tags for each individual subscriber.
+
+### API
+
+Refer to the [subscribers API documentation](/docs/v2/api/subscribers) for information on how to manage subscribers through the API.
+
+## Exporting Subscribers
+
+To export subscribers, click the _Subscribers_ link in the sidebar. From there, click the overflow menu button and then _Export Subscribers_.
+
+## Unsubscribing
+
+### Manually Unsubscribing
+
+To manually unsubscribe a subscriber, you should go to the subscriber edit page, uncheck `Subscribed` and then click _Save_.
+
+### Unsubscribe Links
+
+Laravel Mail allows automatic injection of unsubscribe links in your templates and campaigns. See the [templates](/docs/v2/features/templates) section for more information on how this works.
+
+When a user clicks on the unsubscribe link, they will be sent to a web page asking them to confirm that they want to be unsubscribed.
+
+If they decide to unsubscribe, they will be shown a confirmation message that they have been unsubscribed, along with the option to resubscribe.
