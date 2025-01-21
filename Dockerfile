@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
-# FRONTEND - TODO: Make this work
+# FRONTEND
 
 COPY frontend /home/frontend/
 COPY frontend/package.json /home/frontend/package.json
