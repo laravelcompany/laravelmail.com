@@ -38,6 +38,7 @@ export default defineConfig({
       'localhost',
       '127.0.0.1',
       'laravelmail.com',
+      'frontend.laravelmail.com'
     ],
     proxy: {
       '/backend/': {
