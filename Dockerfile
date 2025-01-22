@@ -12,11 +12,22 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # FRONTEND
 
+# Install NVM and NodeJS
+ENV NVM_DIR=/usr/local/nvm
+ENV NODE_VERSION=v21.0.0
+
+RUN mkdir -p $NVM_DIR && curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+RUN /bin/bash -c "source $NVM_DIR/nvm.sh && nvm install $NODE_VERSION && nvm use --delete-prefix $NODE_VERSION"
+
+ENV NODE_PATH=$NVM_DIR/versions/node/$NODE_VERSION/lib/node_modules
+ENV PATH=$NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
+
 COPY frontend /home/frontend/
 COPY frontend/package.json /home/frontend/package.json
 WORKDIR /home/frontend/
 RUN npm install --legacy-peer-deps
-
+RUN npm install sass-embedded
+RUN npm run build
 #Now copy to Return-Receipt-To:
 
 
