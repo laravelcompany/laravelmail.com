@@ -1,0 +1,139 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro';
+import db from '../../data/data.json';
+
+// Get the slug from the URL params.
+const { slug } = Astro.params;
+
+// Find the matching template from the data.
+const template = db.data.find(template => template.slug === slug);
+const defaultDescription = "Download Laravel mail templates and Laravel Blade Email templates to enhance your projects with professionally designed email layouts.";
+const data = await fetch('http://0.0.0.0:11001/templates/' + template.slug).then((response) =>
+  response.text()
+);
+---
+
+<DefaultLayout title={'Download Laravel Mail Template - ' + template.name}>
+  <head>
+    <meta name="description" content={template.description || defaultDescription} />
+    <meta name="keywords" content="download Laravel mail templates, Laravel Blade Email templates, free email templates, Laravel email designs" />
+    <meta name="author" content="Laravel Mail" />
+  </head>
+  <section class="my-32">
+    <div class="container mx-auto">
+      <h1 class="mb-8 text-5xl font-bold text-center">Download Laravel Mail Template - {template.name}</h1>
+
+      <div class="text-center">
+        <img 
+          src={'https://api.unlayer.com/v2/stock-templates/' + template.slug + '/thumbnail'} 
+          alt={`Thumbnail for ${template.name}, a Laravel Blade email template`} 
+          class="object-cover mx-auto rounded-lg h-64" 
+        />
+      </div>
+
+      <div class="mt-8 p-8 shadow-md rounded-lg">
+        <p class="text-lg text-gray-600">
+          <strong>Description:</strong> {template.description || defaultDescription}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Rating:</strong> {template.rating}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Type:</strong> {template.type}
+        </p>
+        <p class="text-lg text-gray-600">
+          <strong>Votes:</strong> 
+          2 stars: {template.votes['2'] || 0}, 
+          3 stars: {template.votes['3'] || 0}, 
+          4 stars: {template.votes['4'] || 0}, 
+          5 stars: {template.votes['5'] || 0}
+        </p>
+      </div>
+
+      <iframe 
+        srcdoc={data} 
+        style="width: 100vw; height:65vh; margin-top:20px;" 
+        class="shadow-md rounded-lg"
+        title={`Preview of Laravel Blade email template: ${template.name}`}
+      ></iframe>
+
+      <div class="mt-10 text-2xl text-center">
+        <button 
+          id="downloadBtn"
+          class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+          data-template={data}
+          data-umami-event-title="Download Laravel Mail Template"
+          data-umami-event-url={template.slug}
+          data-filename={template.slug + '.html'}
+          aria-label={`Download HTML source code for ${template.name}`}
+        >   
+         Download HTML {template.name}
+        </button>
+        <button 
+        id="downloadBlade"
+        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+        data-template={data}
+        data-umami-event-title="Download Laravel Mail Template"
+        data-umami-event-url={template.slug}
+        data-filename={template.slug + '.blade.php'}
+        aria-label={`Download Blade source code for ${template.name}`}
+      >   
+        Download Blade {template.name}
+      </button>
+      <br/>
+      </div>
+
+      <div class="mt-10 text-2xl text-center">
+        <a style="color:white"  class="bg-blue-500 mt-5 text-white py-2 px-4 rounded-lg hover:bg-blue-600" href="https://app.laravelmail.com/register" target="blank">   
+          Edit online
+        </a>
+      </div>
+    </div>
+  </div>
+  </section>
+</DefaultLayout>
+
+<script>
+  // Handle download on the client side
+  document.getElementById('downloadBtn')?.addEventListener('click', function(e) {
+    const button = e.target as HTMLButtonElement;
+    const templateData = button.dataset.template;
+    const filename = button.dataset.filename;
+
+    if (templateData && filename) {
+      const blob = new Blob([templateData], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      
+      // Clean up
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  });
+
+  document.getElementById('downloadBlade')?.addEventListener('click', function(e) {
+    const button = e.target as HTMLButtonElement;
+    const templateData = button.dataset.template;
+    const filename = button.dataset.filename;
+
+    if (templateData && filename) {
+      const blob = new Blob([templateData], { type: 'text/php' });
+      const url = URL.createObjectURL(blob);
+      
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      
+      // Clean up
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  });
+</script>
