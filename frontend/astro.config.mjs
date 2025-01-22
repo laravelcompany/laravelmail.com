@@ -37,12 +37,13 @@ export default defineConfig({
     allowedHosts:[
       'localhost',
       '127.0.0.1',
+      '0.0.0.0',
       'laravelmail.com',
       'frontend.laravelmail.com'
     ],
     proxy: {
       '/backend/': {
-        target: 'http//127.0.0.1:11001/',
+        target: 'http//127.0.0.1:1101/',
         secure: false,
         autoRewrite: true,
         changeOrigin: true,

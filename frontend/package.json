@@ -1,14 +1,14 @@
 {
   "name": "leadscaptain",
-  "description": "A self-hosted marketing platform for your business.",
+  "description": "A self-hosted marketing platform for your laravel business.",
   "version": "0.0.1",
   "author": "Stefan Izdrail",
   "homepage": "https://leadscaptain.com/",
   "scripts": {
-    "dev": "astro dev --host laravelmail.com --port 11000 --reload",
+    "dev": "astro dev --host laravelmail.com --port 1100 --reload",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview --host laravelmail.com --port 11000 --reload"
+    "preview": "astro preview --host laravelmail.com --port 1100 --reload"
   },
   "dependencies": {
     "@astrojs/check": "^0.8.2",

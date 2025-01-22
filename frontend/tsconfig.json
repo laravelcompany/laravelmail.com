@@ -12,7 +12,7 @@
           "./src/*"
         ],
         "config": [
-          "src/config.ts"
+          "./src/config.ts"
         ]
       }
     }
