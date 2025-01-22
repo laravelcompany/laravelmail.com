@@ -34,6 +34,11 @@ export default defineConfig({
   },
   integrations: [ tailwind(),vue(),icon(),react(),mdx(),compress() ],
   server: {
+    allowedHosts:[
+      'localhost',
+      '127.0.0.1',
+      'laravelmail.com',
+    ],
     proxy: {
       '/backend/': {
         target: 'http//127.0.0.1:11001/',
