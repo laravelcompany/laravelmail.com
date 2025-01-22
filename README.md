@@ -15,3 +15,8 @@ Powerful marketing, automations, Voip communication and transactional emails, se
 - Edit, send, and track transactional emails directly in Laravel Mail.
 
 Check our website on how to [Get started](https://laravelmail.com/).
+
+
+## Developers
+
+1. While working you will need to add laravelmail.com domain to hosts file.
