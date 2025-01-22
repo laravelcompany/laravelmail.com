@@ -5,11 +5,33 @@ import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
 import compress from 'astro-compress';
 import icon from "astro-icon";
+import vercel from '@astrojs/vercel/serverless';
 
+import rehypeExternalLinks from "rehype-external-links";
 
 
 
 export default defineConfig({
+  markdown: {
+    smartypants: true,
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      // theme: "catppuccin-mocha",
+      themes: {
+        light: "catppuccin-latte",
+        dark: "catppuccin-macchiato",
+      },
+    },
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: "_blank",
+        },
+      ],
+    ],
+    prefetch: true,
+  },
   integrations: [ tailwind(),vue(),icon(),react(),mdx(),compress() ],
   server: {
     proxy: {
@@ -40,6 +62,10 @@ export default defineConfig({
       ],
       external: ['vue', 'astro-icon'],
     },
-  }
-
+  },
+  ssr: {
+    noExternal: [/.astro/]
+  },
+  output: 'server',
+  adapter: vercel(),
 });

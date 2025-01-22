@@ -86,6 +86,9 @@
         "max_width": {
           "type": "boolean",
           "default": false
+        },
+        "$schema": {
+          "type": "string"
         }
       },
       "required": [
