@@ -25,8 +25,7 @@ ENV PATH=$NVM_DIR/versions/node/$NODE_VERSION/bin:$PATH
 COPY frontend /home/frontend/
 COPY frontend/package.json /home/frontend/package.json
 WORKDIR /home/frontend/
-RUN npm install --legacy-peer-deps
-RUN npm install sass-embedded
+RUN npm install --force
 RUN npm run build
 #Now copy to Return-Receipt-To:
 
