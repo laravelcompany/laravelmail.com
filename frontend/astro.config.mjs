@@ -5,6 +5,7 @@ import vue from '@astrojs/vue';
 import tailwind from '@astrojs/tailwind';
 import compress from 'astro-compress';
 import icon from "astro-icon";
+import node from '@astrojs/node';
 
 import rehypeExternalLinks from "rehype-external-links";
 
@@ -53,6 +54,8 @@ export default defineConfig({
     emptyOutDir: true,
   },
   output: 'server',
-
+  adapter: node({
+    mode: 'standalone'
+  })
 });
                                                                   

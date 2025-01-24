@@ -26,7 +26,7 @@ COPY frontend/package.json /home/frontend/package.json
 WORKDIR /home/frontend/
 RUN npm install --force
 # Build your Astro site / This needs to be build locally before deploy
-# RUN npm run build
+RUN npm run build
 
 # Configure Apache to serve static files on port 1100
 COPY docker/apache.conf /etc/apache2/sites-available/apache.conf
