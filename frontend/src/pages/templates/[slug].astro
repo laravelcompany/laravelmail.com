@@ -2,15 +2,24 @@
 import DefaultLayout from '../../layouts/DefaultLayout.astro';
 import db from '../../data/data.json';
 
-// Get the slug from the URL params.
-const { slug } = Astro.params;
+export const prerender = false;
 
-// Find the matching template from the data.
-const template = db.data.find(template => template.slug === slug);
+// This function generates paths for each dynamic route
+export async function getStaticPaths() {
+  return db.data.map(template => ({
+    params: { slug: template.slug },
+    props: { template }
+  }));
+}
+
+// Get the template from props instead of searching through db again
+const { template } = Astro.props;
+
 const defaultDescription = "Download Laravel mail templates and Laravel Blade Email templates to enhance your projects with professionally designed email layouts.";
-const data = await fetch('http://0.0.0.0:11001/templates/' + template.slug).then((response) =>
-  response.text()
-);
+
+// Fetch the template data
+const response = await fetch('http://0.0.0.0:1101/templates/' + template.slug);
+const data = await response.text();
 ---
 
 <DefaultLayout title={'Download Laravel Mail Template - ' + template.name}>

@@ -3,11 +3,12 @@ FROM python:3.11-slim
 
 LABEL maintainer="Stefan Bogdanel <stefan@izdrail.com>"
 
-# Install OS dependencies including Apache
+# Install OS dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl nodejs gcc g++ make procps libssl-dev npm \
-    htop mlocate supervisor software-properties-common git apache2 \
+    htop mlocate supervisor software-properties-common git \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
+
 
 # FRONTEND
 
@@ -25,15 +26,9 @@ COPY frontend /home/frontend/
 COPY frontend/package.json /home/frontend/package.json
 WORKDIR /home/frontend/
 RUN npm install --force
-# Build your Astro site / This needs to be build locally before deploy
-# RUN npm run build
+#RUN npm run build
+#Now copy to Return-Receipt-To:
 
-# Configure Apache to serve static files on port 1100
-COPY docker/apache.conf /etc/apache2/sites-available/apache.conf
-RUN a2ensite apache && a2dissite 000-default && \
-    echo "Listen 1100" >> /etc/apache2/ports.conf && \
-    a2enmod rewrite && \
-    service apache2 restart
 
 # Upgrade pip and install pipx
 RUN pip install --no-cache-dir --upgrade pip \
@@ -55,8 +50,10 @@ RUN apt-get autoremove -y \
 # Copy Supervisor configuration
 COPY docker/supervisord.conf /etc/supervisord.conf
 
+
 # Expose application ports
 EXPOSE 1100 1101
 
 # Run application
 ENTRYPOINT ["supervisord", "-c", "/etc/supervisord.conf", "-n"]
+
