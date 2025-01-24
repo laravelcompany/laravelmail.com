@@ -6,11 +6,8 @@ services:
     image: izdrail/laravelmail.com:latest
     restart: always
     ports:
-      - "11000:11000"   # Backend service port
-      - "11001:11001"   # Backend service port
+      - "1100:1100"   # Backend service port
+      - "1101:1101"   # Backend service port
     volumes:
       - ./backend:/home/backend
       - ./frontend:/home/frontend
-    environment:
-      - CLOUDFLARE_ACCOUNT_ID=e2fa0631e7c2fafc79e68a70a5968569
-      - CLOUDFLARE_API_KEY=av76jm154SuiQ8wu_4Nm_5tjQRjTB-u2RRJZ_nsS

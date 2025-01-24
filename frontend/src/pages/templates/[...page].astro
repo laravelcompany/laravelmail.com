@@ -1,10 +1,21 @@
 ---
 import DefaultLayout from '../../layouts/DefaultLayout.astro';
-export const prerender = false
-
 import data from '../../data/data.json'; // Import JSON data
 
+export const prerender = false;
+
 const defaultDescription = "Explore our collection of free Laravel newsletter templates, optimized for developers. Get started with Laravel templates today!";
+
+// This function generates paths for each dynamic route
+export async function getStaticPaths() {
+  return data.data.map(template => ({
+    params: { slug: template.slug },
+    props: { template }
+  }));
+}
+
+// Here, we assume the dynamic route is based on the template's slug
+const { template } = Astro.props;
 ---
 
 <DefaultLayout title="Explore our collection of free Laravel newsletter templates">
